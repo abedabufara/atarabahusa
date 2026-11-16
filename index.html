@@ -1,402 +1,191 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {
-  Shield,
-  ThermometerSnowflake,
-  VolumeX,
-  Ruler,
-  Calendar,
-  Phone,
-  MapPin,
-  CheckCircle2,
-  XCircle,
-  ArrowRight,
-  MessageSquare,
-  Send,
-  X,
-  Sparkles,
-  Award,
-  Building2,
-  ChevronRight,
-  Globe,
-  Menu,
-  Lock,
-  Layers,
-  Briefcase,
-  Download,
-  Sliders,
-  Zap,
-  Maximize2,
-  Cpu
-} from 'lucide-react';
+   <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATA RABAH USA | Thermal Break 20 Architectural Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#F5F5F7] text-[#1D1D1F] antialiased selection:bg-[#F26522] selection:text-white font-sans">
+    <div id="root"></div>
 
-// ==========================================
-// OFFICIAL ATA RABAH SVG LOGO COMPONENT
-// Exact vector recreation of the uploaded ATA RABAH® logo
-// ==========================================
-const AtaRabahLogo = ({ className = "h-12", darkText = true }) => (
-  <div className={`inline-flex items-center select-none ${className}`}>
-    <svg viewBox="85 88 420 262" className="h-full w-auto overflow-visible" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Left Grey Architectural Roof/Frame Line */}
-      <path d="M 122 268 L 114 268 Q 103 268 103 256 L 103 166 Q 103 154 116 151 L 267 118" stroke="#8E9093" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Right Grey Architectural Roof/Frame Line */}
-      <path d="M 312 132 L 472 158 Q 486 161 486 174 L 486 255 Q 486 268 473 268 L 290 268" stroke="#8E9093" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" />
-      
-      {/* ========================================== 
-          ORANGE ARABIC SECTION: "عطا" (#EF671E)
-         ========================================== */}
-      <path d="M 286 102 L 301 97 L 301 224 L 286 224 Z" fill="#EF671E" />
-      <rect x="286" y="209" width="186" height="15" fill="#EF671E" />
-      <path d="M 314 141 L 329 145 L 329 224 L 314 224 Z" fill="#EF671E" />
-      <path d="M 328 180 L 364 180 C 387 180 401 193 401 212 L 401 224 L 385 224 L 385 210 C 385 200 376 195 362 195 L 328 195 Z" fill="#EF671E" />
-      <path d="M 472 177 L 435 177 C 420 177 413 185 413 196 C 413 207 421 215 435 215 L 435 201 C 430 201 428 199 428 196 C 428 193 430 191 435 191 L 472 191 Z" fill="#EF671E" />
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        const {
+            Shield, ThermometerSnowflake, VolumeX, Ruler, Calendar, Phone, MapPin,
+            CheckCircle2, XCircle, ArrowRight, MessageSquare, Send, X, Sparkles,
+            Award, Building2, ChevronRight, Globe, Menu, Lock, Layers, Briefcase,
+            Download, Sliders, Zap, Maximize2, Cpu
+        } = lucide;
 
-      {/* ========================================== 
-          BLACK ARABIC SECTION: "رباح"
-         ========================================== */}
-      <path d="M 268 188 L 282 188 L 282 248 C 282 262 274 269 259 269 L 252 269 L 252 254 L 258 254 C 265 254 268 251 268 244 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
-      <path d="M 248 188 L 262 188 L 262 236 L 202 236 L 202 139 L 216 135 L 216 222 L 248 222 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
-      <path d="M 138 175 L 196 175 L 196 229 L 182 229 L 182 216 L 152 216 C 141 216 136 223 136 235 C 136 247 141 254 152 254 L 221 254 L 221 268 L 150 268 C 130 268 121 255 121 235 C 121 215 131 203 150 203 L 182 203 L 182 189 L 138 189 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
-      <circle cx="233" cy="245" r="16.5" fill="#EF671E" />
-
-      {/* ========================================== 
-          ENGLISH TYPOGRAPHY: ATA RABAH ®
-         ========================================== */}
-      <text x="148" y="332" fontFamily="-apple-system, BlinkMacSystemFont, Inter, sans-serif" fontWeight="800" fontSize="43" letterSpacing="0.5" fill="#EF671E">
-        ATA
-      </text>
-      <text x="256" y="332" fontFamily="-apple-system, BlinkMacSystemFont, Inter, sans-serif" fontWeight="800" fontSize="43" letterSpacing="0.5" fill={darkText ? "#1D1D1F" : "#F5F5F7"}>
-        RABAH
-      </text>
-      <g transform="translate(447, 297)">
-        <circle cx="0" cy="0" r="8.5" stroke={darkText ? "#1D1D1F" : "#F5F5F7"} strokeWidth="1.8" fill="none" />
-        <text x="0" y="3.5" textAnchor="middle" fontFamily="Inter, Arial, sans-serif" fontWeight="700" fontSize="10" fill={darkText ? "#1D1D1F" : "#F5F5F7"}>
-          R
-        </text>
-      </g>
-    </svg>
-  </div>
-);
-
-// ==========================================
-// APPLE-GRADE PRODUCT LINEUP DATA
-// ==========================================
-const PRODUCTS = [
-  {
-    id: 'thermal-slide-20',
-    category: 'patio-doors',
-    eyebrow: 'THERMAL BREAK 20 SERIES',
-    eyebrowAr: 'الفئة الرائدة • THERMAL BREAK 20',
-    name: 'Lift & Slide Pro',
-    nameAr: 'نظام السحب والرفع الاحترافي 20',
-    tagline: 'Ultra-thin sightlines. Sub-zero immunity.',
-    taglineAr: 'حواف نحيفة للغاية. حصانة تامة ضد الصقيع.',
-    basePrice: 3850,
-    retailComparisonPrice: 6800,
-    uFactor: '0.24',
-    soundRating: '45 dB',
-    tempRange: '-40°F to 180°F',
-    features: [
-      '34mm Polyamide fiberglass-reinforced thermal barrier eliminates interior frost',
-      'Precision German lift-and-slide rollers glide 880 lb glass panels with one finger',
-      'Ultra-minimalist interlocking aluminum mullions maximize panoramic glass area',
-      'Multi-point stainless steel vault locking system'
-    ],
-    featuresAr: [
-      'عازل بوليميد حراري ٣٤ ملم يمنع انتقال برودة الثلج أو التكثف نهائياً',
-      'عجلات رفع وسحب ألمانية تتيح تحريك ضلف زجاجية عملاقة بإصبع واحد',
-      'مقاطع ألمنيوم نحيفة جداً بتصميم بانورامي يضاهي أرقى الفلل الحديثة',
-      'نظام إغلاق فولاذي متعدد النقاط لأمان مطلق وعزل محكم'
-    ]
-  },
-  {
-    id: 'hinged-french-thermal',
-    category: 'hinged-doors',
-    eyebrow: 'ARCHITECTURAL ENTRY & PATIO',
-    eyebrowAr: 'للواجهات والمداخل الفاخرة',
-    name: 'Thermal French & Pivot',
-    nameAr: 'الأبواب المفصلية والمحورية الفاخرة',
-    tagline: 'Engineered like a vault. Styled like art.',
-    taglineAr: 'صلابة الخزائن المصفحة. وأناقة التحف المعمارية.',
-    basePrice: 3490,
-    retailComparisonPrice: 6100,
-    uFactor: '0.25',
-    soundRating: '44 dB',
-    tempRange: '-40°F to 180°F',
-    features: [
-      'Zero warping, zero rotting, and zero swelling—outlasting fiberglass and wood',
-      'Triple automotive-grade EPDM acoustic & weather compression gaskets',
-      'Heavy-duty concealed 3D architectural hinges for flush modern aesthetics',
-      'Bespoke millimeter sizing up to 10 feet high'
-    ],
-    featuresAr: [
-      'لا يلتوي ولا يتقشر ولا يتأثر بالرطوبة مدى الحياة مقارنة بالخشب والفايبرجلاس',
-      'ثلاث طبقات من الكاوتشوك المطاطي (EPDM) لعزل الصوت والرياح بنسبة ١٠٠٪',
-      'مفصلات مخفية ثلاثية الأبعاد تتحمل الأوزان الثقيلة بمظهر انسيابي',
-      'تفصيل خاص بالمليمتر لغاية ارتفاع ٣ أمتار بدون تقوس'
-    ]
-  },
-  {
-    id: 'tilt-turn-gliding-window',
-    category: 'windows',
-    eyebrow: 'VISTA-CLASS GLAZING',
-    eyebrowAr: 'نوافذ بانورامية معزولة',
-    name: 'Acoustic Tilt & Gliding Windows',
-    nameAr: 'نوافذ عطا رباح السحابة والـ قلاب',
-    tagline: 'Silence the street. Lock in the warmth.',
-    taglineAr: 'اعزل ضجيج الشارع تماماً. واحتفظ بدفء منزلك.',
-    basePrice: 980,
-    retailComparisonPrice: 1950,
-    uFactor: '0.22',
-    soundRating: '46 dB',
-    tempRange: '-40°F to 180°F',
-    features: [
-      'Dual-mode European Tilt & Turn ventilation or frictionless horizontal gliding',
-      '5x structural rigidity of big-box vinyl allows massive floor-to-ceiling spans',
-      'Architectural powder-coat and anodized finishes rated for 30+ years',
-      'Argon-filled Low-E double or triple insulated architectural glass'
-    ],
-    featuresAr: [
-      'متوفرة بنظام السحب السلس أو النظام الأوروبي المزدوج (فتح كامل + قلاب للتهوية)',
-      'أقوى بـ ٥ أضعاف من شبابيك الفينيل البلاستيكية المنتشرة في المتاجر',
-      'طلاء حراري إلكتروستاتيك مقاوم للثلوج والأملاح وأشعة الشمس',
-      'زجاج مزدوج أو ثلاثي مشحون بغاز الأرجون وطبقة Low-E العاكسة للحرارة'
-    ]
-  },
-  {
-    id: 'motorized-shutters',
-    category: 'shutters',
-    eyebrow: 'SMART HOME ARMOR',
-    eyebrowAr: 'حماية ذكية وعزل إضافي',
-    name: 'Motorized Security Shutters',
-    nameAr: 'الأباجورات الكهربائية المعزولة بالـ فوم',
-    tagline: 'Total blackout. Smart storm & security shield.',
-    taglineAr: 'تعتيم كامل. درع ذكي ضد العواصف والسرقة.',
-    basePrice: 1250,
-    retailComparisonPrice: 2450,
-    uFactor: '+40% R-Value',
-    soundRating: '48 dB',
-    tempRange: '-40°F to 180°F',
-    features: [
-      'Polyurethane foam-injected extruded aluminum slats add an exterior thermal shield',
-      'Whisper-quiet smart motors compatible with iPhone, Wall Switch & Voice Control',
-      '100% pitch-black room darkening and physical storm/intruder protection',
-      'Seamless integration for new custom builds or exterior retrofits'
-    ],
-    featuresAr: [
-      'شرائح ألمنيوم محقونة بالفوم العازل تشكل حاجزاً حرارياً إضافياً أمام الزجاج',
-      'محركات ذكية هادئة جداً تعمل عبر الآيفون أو الريموت أو المفاتيح الجدارية',
-      'تعتيم تام للغرف بنسبة ١٠٠٪ مع أمان كامل للمنزل أثناء السفر والعواصف',
-      'تصميم انسيابي يركب للمباني قيد الإنشاء أو الفلل المسكونة'
-    ]
-  }
-];
-
-const FINISH_COLORS = [
-  { id: 'space-black', name: 'Space Black Matte', nameAr: 'أسود مطفي (Space Black)', hex: '#1D1D1F', ring: '#3A3A3C' },
-  { id: 'titanium-grey', name: 'Natural Titanium Grey', nameAr: 'رمادي تيتانيوم أنثراسيت', hex: '#48484A', ring: '#636366' },
-  { id: 'dark-bronze', name: 'Anodized Dark Bronze', nameAr: 'برونزي غامق مؤكسد', hex: '#3B2F2B', ring: '#5C4943' },
-  { id: 'starlight-silver', name: 'Brushed Silver Aluminum', nameAr: 'فضي معدني معالج', hex: '#AEAEB2', ring: '#8E8E93' },
-  { id: 'desert-titanium', name: 'Desert Sand Titanium', nameAr: 'بيج صحراوي تيتانيوم', hex: '#C8B9A6', ring: '#A69683' },
-  { id: 'ceramic-white', name: 'Ceramic Thermal White', nameAr: 'أبيض سيراميك ناصع', hex: '#F5F5F7', ring: '#D2D2D7' },
-];
-
-export default function App() {
-  const [lang, setLang] = useState('en');
-  const isAr = lang === 'ar';
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(PRODUCTS[0]);
-  const [selectedColor, setSelectedColor] = useState(FINISH_COLORS[0]);
-  const [selectedWidth, setSelectedWidth] = useState('96');
-  const [selectedHeight, setSelectedHeight] = useState('96');
-  const [selectedGlass, setSelectedGlass] = useState('triple-acoustic');
-  const [doorOpenAmount, setDoorOpenAmount] = useState(35);
-
-  const [consultationModalOpen, setConsultationModalOpen] = useState(false);
-  const [proPartnerModalOpen, setProPartnerModalOpen] = useState(false);
-  const [bookingSuccess, setBookingSuccess] = useState(false);
-
-  const [leadForm, setLeadForm] = useState({
-    name: '',
-    phone: '',
-    zip: '60462',
-    role: 'Homeowner',
-    notes: ''
-  });
-
-  const [calcDoors, setCalcDoors] = useState(2);
-  const [calcWindows, setCalcWindows] = useState(10);
-  const [calcShutters, setCalcShutters] = useState(2);
-
-  const [chatOpen, setChatOpen] = useState(false);
-  const [chatInput, setChatInput] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      role: 'assistant',
-      text: 'Welcome to ATA RABAH USA.  Ask me anything in English or العربية about our Thermal Break 20 architectural aluminum systems, Pro Builder wholesale pricing, or scheduling a free Chicagoland consultation.'
-    }
-  ]);
-  const chatEndRef = useRef(null);
-
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isTyping]);
-
-  const areaRatio = (parseInt(selectedWidth) * parseInt(selectedHeight)) / (72 * 80);
-  const glassUpcharge = selectedGlass === 'triple-acoustic' ? 420 : 0;
-  const studioPrice = Math.round(selectedProduct.basePrice * Math.max(0.85, areaRatio * 0.85) + glassUpcharge);
-  const studioMonthly = Math.round(studioPrice / 18);
-
-  const totalAtaPackage = (calcDoors * 3650) + (calcWindows * 950) + (calcShutters * 1150);
-  const totalPellaPackage = Math.round(totalAtaPackage * 1.62);
-  const instantSavings = totalPellaPackage - totalAtaPackage;
-
-  const sendChatMessage = async (presetText) => {
-    const query = (presetText || chatInput).trim();
-    if (!query) return;
-
-    const updated = [...messages, { role: 'user', text: query }];
-    setMessages(updated);
-    setChatInput('');
-    setIsTyping(true);
-
-    const systemPrompt = `You are the official AI Architectural Specialist for "ATA RABAH USA" (www.atarabahusa.com), the Exclusive US Distributor of Ata Rabah Thermal-Break Aluminum Doors & Windows (Established 1981).
-Key facts:
-- US General Manager: Abed Abufara | Direct Phone: (407) 910-3711
-- Locations: Orland Park, IL (15255 S 94th Ave) & Tinley Park, IL (Live Demo Residence), serving Oak Brook, Hinsdale, Naperville, and Greater Chicago.
-- Engineering: Thermal Break 20 polyamide insulated aluminum profiles tested from -40°F to 180°F, 45dB soundproofing, double/triple Low-E argon tempered glass, multi-point European locks.
-- Why ATA RABAH vs $548 Home Depot Vinyl: Retail vinyl warps in Chicago winters and costs $2,400+ after mandatory store labor. ATA RABAH is structural architectural aluminum that lasts 50+ years.
-- Why ATA RABAH vs Pella Vista / Andersen: We deliver the same ultra-thin thermally broken aluminum aesthetic at 35-40% lower factory-direct cost, with faster turnaround, Jobsite Delivery, and 0% APR financing for 18 months.
-- Reply concisely in the user's language (English or Arabic) with an Apple-style refined, helpful tone.`;
-
-    const apiKey = "";
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-    try {
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: updated.map(m => ({
-            role: m.role === 'assistant' ? 'model' : 'user',
-            parts: [{ text: m.text }]
-          })),
-          systemInstruction: { parts: [{ text: systemPrompt }] }
-        })
-      });
-      const data = await res.json();
-      const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (reply) {
-        setMessages(prev => [...prev, { role: 'assistant', text: reply }]);
-      } else {
-        throw new Error('No reply');
-      }
-    } catch {
-      const isArabic = /[\u0600-\u06FF]/.test(query);
-      setMessages(prev => [
-        ...prev,
-        {
-          role: 'assistant',
-          text: isArabic
-            ? 'أهلاً بك في ATA RABAH USA! نقدم في شيكاغو وأورلاند بارك أنظمة الألمنيوم المعماري المعزول حرارياً (Thermal Break 20) المختبرة من -40°F إلى 180°F، مع تقسيط 0% لمدة 18 شهراً وأسعار خاصة للمقاولين وبناة الفلل. تواصل مباشرة مع المدير العام عبد أبو فارة على الرقم (407) 910-3711 أو احجز معاينة مجانية من الموقع.'
-            : 'ATA RABAH USA delivers European-grade Thermal Break 20 aluminum doors, windows, and motorized security shutters across Chicagoland. Tested from -40°F to 180°F with 0% APR financing for 18 months and direct jobsite delivery. Call GM Abed Abufara at (407) 910-3711 or click "Reserve Consultation" above!'
-        }
-      ]);
-    }
-    setIsTyping(false);
-  };
-
-  return (
-    <div dir={isAr ? 'rtl' : 'ltr'} className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F] antialiased selection:bg-[#F26522] selection:text-white" style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Cairo', sans-serif" }}>
-      
-      {/* Top Ribbon */}
-      <div className="bg-[#000000] text-[#F5F5F7]/80 text-[11px] sm:text-xs py-2 px-4 border-b border-white/10">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#F26522]" />
-            <span className="font-medium text-white">
-              {isAr ? 'الوكيل الحصري في الولايات المتحدة • معرض أورلاند بارك وشيكاغو' : 'Exclusive US Distributor • Orland Park & Greater Chicago Showroom'}
-            </span>
-          </div>
-          <div className="flex items-center gap-5">
-            <button onClick={() => setConsultationModalOpen(true)} className="text-[#F26522] hover:underline font-medium cursor-pointer">
-              {isAr ? 'تمويل 0% لمدة 18 شهراً ←' : '0% APR for 18 Months →'}
-            </button>
-            <a href="tel:4079103711" className="hover:text-white transition font-medium">(407) 910-3711</a>
-          </div>
-        </div>
-      </div>
-
-      {/* Navbar */}
-      <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-black/5 transition-all">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <a href="#hero" className="flex items-center gap-3">
-            <AtaRabahLogo className="h-11 sm:h-12" darkText={true} />
-          </a>
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-medium text-[#1D1D1F]/80">
-            <a href="#bento" className="hover:text-black transition">{isAr ? 'الهندسة الحرارية' : 'Thermal Break 20'}</a>
-            <a href="#studio" className="hover:text-black transition">{isAr ? 'استوديو التصميم' : 'Design Studio'}</a>
-            <a href="#lineup" className="hover:text-black transition">{isAr ? 'الأنظمة المعمارية' : 'Lineup'}</a>
-            <a href="#pro-builders" className="hover:text-[#F26522] text-black font-semibold transition">{isAr ? 'للمقاولين (Pro)' : 'For Builders & Pros'}</a>
-            <a href="#compare" className="hover:text-black transition">{isAr ? 'المقارنة' : 'Compare'}</a>
-          </nav>
-          <div className="flex items-center gap-2.5">
-            <button onClick={() => setLang(isAr ? 'en' : 'ar')} className="px-3 py-1.5 rounded-full bg-black/5 hover:bg-black/10 text-xs font-semibold text-[#1D1D1F] flex items-center gap-1.5 transition cursor-pointer">
-              <Globe className="w-3.5 h-3.5 text-[#F26522]" /> {isAr ? 'EN' : 'العربية'}
-            </button>
-            <button onClick={() => setConsultationModalOpen(true)} className="px-4 py-1.5 rounded-full bg-[#F26522] hover:bg-[#d95314] text-white text-xs font-semibold shadow-sm transition cursor-pointer">
-              {isAr ? 'احجز استشارة مجانية' : 'Reserve Consultation'}
-            </button>
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-1.5 rounded-full hover:bg-black/5">
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section id="hero" className="relative bg-[#000000] text-[#F5F5F7] pt-16 pb-24 overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-b from-[#F26522]/20 via-[#F26522]/5 to-transparent blur-3xl pointer-events-none" />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-white/10 border border-white/15 text-[#F26522] text-xs font-semibold tracking-wider uppercase">
-            {isAr ? 'هندسة معمارية منذ 1981 • شيكاغو' : 'ARCHITECTURAL ALUMINUM • ENGINEERED SINCE 1981'}
-          </div>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.06] bg-gradient-to-b from-white via-white to-white/65 bg-clip-text text-transparent">
-            {isAr ? <>Thermal Break 20 Pro. <br /><span className="text-[#F26522]">نحافة فائقة. عزل مطلق.</span></> : <>Thermal Break 20 Pro. <br /><span className="text-[#F26522]">Titanium-grade strength.</span></>}
-          </h1>
-          <p className="max-w-2xl mx-auto text-base sm:text-xl text-[#86868B] font-normal leading-relaxed">
-            {isAr ? 'أبواب ونوافذ ألمنيوم معماري معزول حرارياً مصممة لتتحدى صقيع شيكاغو (-40°F) بصمت تام وأناقة أوروبية. متوفرة الآن بسعر المصنع مباشرة لأصحاب الفلل والمقاولين في إلينوي.' : 'Ultra-thin thermally broken aluminum doors and windows. Tested from -40°F to 180°F. Factory-direct to Chicagoland homeowners and custom builders—at 35% less than traditional showroom brands.'}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <button onClick={() => setConsultationModalOpen(true)} className="px-7 py-3.5 rounded-full bg-[#F26522] hover:bg-[#ff7433] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#F26522]/25 transition transform hover:scale-[1.02] cursor-pointer">
-              {isAr ? 'احجز معاينة مجانية بالمنزل' : 'Schedule Free In-Home Consultation'}
-            </button>
-            <a href="#studio" className="px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm sm:text-base flex items-center gap-2 transition">
-              <span>{isAr ? 'جرّب استوديو التصميم والأسعار' : 'Explore Design Studio'}</span>
-              <ChevronRight className="w-4 h-4 text-[#F26522]" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-black/10 text-xs text-[#86868B] py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-8 border-b border-black/5">
-            <AtaRabahLogo className="h-12" darkText={true} />
-            <div className="text-left sm:text-right">
-              <div className="font-bold text-[#1D1D1F] text-sm">Abed Abufara — General Manager (USA)</div>
-              <div className="text-[#F26522] font-bold">Direct: (407) 910-3711 • www.atarabahusa.com</div>
-              <div>15255 S 94th Ave, 5th Floor, Orland Park, IL 60462 • Tinley Park Demo Residence</div>
+        // شعار شركة عطا رباح الرسمي بتقنية SVG الدقيقة
+        const AtaRabahLogo = ({ className = "h-12", darkText = true }) => (
+            <div className={`inline-flex items-center select-none ${className}`}>
+                <svg viewBox="85 88 420 262" className="h-full w-auto overflow-visible" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 122 268 L 114 268 Q 103 268 103 256 L 103 166 Q 103 154 116 151 L 267 118" stroke="#8E9093" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 312 132 L 472 158 Q 486 161 486 174 L 486 255 Q 486 268 473 268 L 290 268" stroke="#8E9093" strokeWidth="4.2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M 286 102 L 301 97 L 301 224 L 286 224 Z" fill="#EF671E" />
+                    <rect x="286" y="209" width="186" height="15" fill="#EF671E" />
+                    <path d="M 314 141 L 329 145 L 329 224 L 314 224 Z" fill="#EF671E" />
+                    <path d="M 328 180 L 364 180 C 387 180 401 193 401 212 L 401 224 L 385 224 L 385 210 C 385 200 376 195 362 195 L 328 195 Z" fill="#EF671E" />
+                    <path d="M 472 177 L 435 177 C 420 177 413 185 413 196 C 413 207 421 215 435 215 L 435 201 C 430 201 428 199 428 196 C 428 193 430 191 435 191 L 472 191 Z" fill="#EF671E" />
+                    <path d="M 268 188 L 282 188 L 282 248 C 282 262 274 269 259 269 L 252 269 L 252 254 L 258 254 C 265 254 268 251 268 244 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
+                    <path d="M 248 188 L 262 188 L 262 236 L 202 236 L 202 139 L 216 135 L 216 222 L 248 222 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
+                    <path d="M 138 175 L 196 175 L 196 229 L 182 229 L 182 216 L 152 216 C 141 216 136 223 136 235 C 136 247 141 254 152 254 L 221 254 L 221 268 L 150 268 C 130 268 121 255 121 235 C 121 215 131 203 150 203 L 182 203 L 182 189 L 138 189 Z" fill={darkText ? "#0A0A0A" : "#FFFFFF"} />
+                    <circle cx="233" cy="245" r="16.5" fill="#EF671E" />
+                    <text x="148" y="332" fontFamily="-apple-system, sans-serif" fontWeight="800" fontSize="43" fill="#EF671E">ATA</text>
+                    <text x="256" y="332" fontFamily="-apple-system, sans-serif" fontWeight="800" fontSize="43" fill={darkText ? "#1D1D1F" : "#F5F5F7"}>RABAH</text>
+                    <g transform="translate(447, 297)">
+                        <circle cx="0" cy="0" r="8.5" stroke={darkText ? "#1D1D1F" : "#F5F5F7"} strokeWidth="1.8" fill="none" />
+                        <text x="0" y="3.5" textAnchor="middle" fontSize="10" fill={darkText ? "#1D1D1F" : "#F5F5F7"}>R</text>
+                    </g>
+                </svg>
             </div>
-          </div>
-          <div className="flex flex-wrap justify-between gap-4">
-            <p>© {new Date().getFullYear()} ATA RABAH USA. All rights reserved. Established 1981.</p>
-            <p>Thermal Break 20 • Tested -40°F to 180°F • Chicagoland Exclusive Agency</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+        );
+
+        function App() {
+            const [lang, setLang] = useState('en');
+            const isAr = lang === 'ar';
+            const [modalOpen, setModalOpen] = useState(false);
+
+            return (
+                <div dir={isAr ? 'rtl' : 'ltr'} className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F]">
+                    {/* الشريط العلوي */}
+                    <div className="bg-black text-white text-xs py-2 px-4">
+                        <div className="max-w-6xl mx-auto flex justify-between items-center">
+                            <span>{isAr ? 'الوكيل الحصري في الولايات المتحدة • معرض أورلاند بارك وشيكاغو' : 'Exclusive US Distributor • Orland Park & Chicago Showroom'}</span>
+                            <div className="flex gap-4">
+                                <span className="text-[#F26522] font-semibold">{isAr ? 'تمويل 0% لمدة 18 شهراً' : '0% APR for 18 Months'}</span>
+                                <a href="tel:4079103711" className="hover:underline">(407) 910-3711</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* القائمة الرئيسية */}
+                    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-black/5">
+                        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+                            <AtaRabahLogo className="h-11" darkText={true} />
+                            <nav className="hidden md:flex gap-8 text-xs font-medium text-gray-700">
+                                <a href="#features" className="hover:text-black">{isAr ? 'العزل الحراري' : 'Thermal Break 20'}</a>
+                                <a href="#lineup" className="hover:text-black">{isAr ? 'الأنظمة' : 'Lineup'}</a>
+                                <a href="#builders" className="hover:text-[#F26522] font-bold">{isAr ? 'للمقاولين' : 'For Builders'}</a>
+                            </nav>
+                            <div className="flex items-center gap-3">
+                                <button onClick={() => setLang(isAr ? 'en' : 'ar')} className="px-3 py-1.5 rounded-full bg-black/5 text-xs font-bold">
+                                    {isAr ? 'EN' : 'العربية'}
+                                </button>
+                                <button onClick={() => setModalOpen(true)} className="px-4 py-1.5 rounded-full bg-[#F26522] text-white text-xs font-semibold shadow">
+                                    {isAr ? 'احجز استشارة مجانية' : 'Reserve Consultation'}
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* واجهة البطل (Hero) */}
+                    <section className="bg-black text-white py-24 px-6 text-center relative overflow-hidden">
+                        <div className="max-w-4xl mx-auto space-y-6 relative z-10">
+                            <span className="px-4 py-1 rounded-full bg-white/10 text-[#F26522] text-xs font-bold uppercase">
+                                {isAr ? 'هندسة معمارية منذ 1981 • شيكاغو' : 'ARCHITECTURAL ALUMINUM • ENGINEERED SINCE 1981'}
+                            </span>
+                            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+                                {isAr ? 'نظام Thermal Break 20 المعزول. نحافة فائقة وعزل مطلق.' : 'Thermal Break 20 Pro. Titanium-grade strength.'}
+                            </h1>
+                            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
+                                {isAr ? 'أبواب ونوافذ ألمنيوم مصممة خصيصاً لتتحدى صقيع شيكاغو (-40°F) وتمنح منزلك فخامة الأناقة الأوروبية بسعر المصنع مباشرة.' : 'Ultra-thin thermally broken aluminum doors and windows. Tested from -40°F to 180°F. Factory-direct across Chicagoland.'}
+                            </p>
+                            <div className="pt-4 flex justify-center gap-4">
+                                <button onClick={() => setModalOpen(true)} className="px-7 py-3 rounded-full bg-[#F26522] text-white font-bold text-sm shadow-lg hover:bg-[#d95314] transition">
+                                    {isAr ? 'احجز معاينة مجانية بالمنزل' : 'Schedule Free Consultation'}
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* قسم مميزات العزل */}
+                    <section id="features" className="py-20 px-6 max-w-6xl mx-auto">
+                        <div className="text-center space-y-3 mb-16">
+                            <h2 className="text-3xl font-bold">{isAr ? 'لماذا تختار ألمنيوم عطا رباح؟' : 'Why ATA RABAH Thermal Break 20'}</h2>
+                            <p className="text-gray-500">{isAr ? 'تتفوق هندسياً على الفينيل والخشب التقليدي في أقسى الظروف المناخية.' : 'Engineered to outperform vinyl and wood in extreme North American winters.'}</p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            <div className="bg-white p-8 rounded-3xl shadow-sm border border-black/5 space-y-4">
+                                <div className="w-12 h-12 rounded-2xl bg-[#F26522]/10 flex items-center justify-center text-[#F26522]">
+                                    <ThermometerSnowflake className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold">{isAr ? 'عزل حراري تام (-40°F)' : 'Sub-Zero Thermal Break'}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    {isAr ? 'عازل بوليميد حراري ٣٤ ملم يمنع انتقال البرودة والصقيع نهائياً ويحافظ على دفء منزلك.' : '34mm polyamide fiberglass barrier eliminates interior frost and condensation entirely.'}
+                                </p>
+                            </div>
+                            <div className="bg-white p-8 rounded-3xl shadow-sm border border-black/5 space-y-4">
+                                <div className="w-12 h-12 rounded-2xl bg-[#F26522]/10 flex items-center justify-center text-[#F26522]">
+                                    <VolumeX className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold">{isAr ? 'هدوء الاستوديوهات (45 dB)' : 'Studio-Grade Acoustics'}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    {isAr ? 'طبقات مطاطية مزدوجة مع زجاج عازل للصوت تحجب ضجيج الشارع والسيارات بالكامل.' : 'Triple EPDM compression seals and acoustic glass silence highway traffic and outside noise.'}
+                                </p>
+                            </div>
+                            <div className="bg-white p-8 rounded-3xl shadow-sm border border-black/5 space-y-4">
+                                <div className="w-12 h-12 rounded-2xl bg-[#F26522]/10 flex items-center justify-center text-[#F26522]">
+                                    <Shield className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-xl font-bold">{isAr ? 'أمان متعدد النقاط' : 'Multi-Point Vault Locking'}</h3>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    {isAr ? 'نظام إغلاق فولاذي متطور يغلق في عدة نقاط لإحكام العزل ومنع أي محاولة اقتحام.' : 'Hardened steel deadbolts engage across the frame for bank-vault security and airtight seal.'}
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* تذييل الصفحة (Footer) */}
+                    <footer className="bg-white border-t border-black/10 py-12 px-6 text-xs text-gray-500">
+                        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                            <AtaRabahLogo className="h-10" darkText={true} />
+                            <div className="text-center md:text-right">
+                                <p className="font-bold text-black">Abed Abufara — General Manager (USA)</p>
+                                <p className="text-[#F26522] font-bold">Direct: (407) 910-3711 • www.atarabahusa.com</p>
+                                <p>15255 S 94th Ave, Orland Park, IL 60462 • Tinley Park Demo Residence</p>
+                            </div>
+                        </div>
+                    </footer>
+
+                    {/* نافذة الحجز المنبثقة */}
+                    {modalOpen && (
+                        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+                            <div className="bg-white w-full max-w-md rounded-3xl p-8 relative space-y-6 shadow-2xl">
+                                <button onClick={() => setModalOpen(false)} className="absolute top-5 right-5 text-gray-400 hover:text-black">
+                                    <X className="w-5 h-5" />
+                                </button>
+                                <div className="space-y-2">
+                                    <h3 className="text-2xl font-bold">{isAr ? 'احجز استشارة مجانية' : 'Free Chicagoland Consultation'}</h3>
+                                    <p className="text-xs text-gray-500">{isAr ? 'سيتواصل معك المدير العام عبد أبو فارة لتنسيق الموعد وإحضار عينات الألمنيوم.' : 'General Manager Abed Abufara will coordinate your sample visit.'}</p>
+                                </div>
+                                <form onSubmit={(e) => { e.preventDefault(); alert(isAr ? 'تم استلام طلبك بنجاح!' : 'Request submitted successfully!'); setModalOpen(false); }} className="space-y-4">
+                                    <div>
+                                        <label className="text-xs font-bold block mb-1">{isAr ? 'الاسم الكامل' : 'Full Name'}</label>
+                                        <input required type="text" className="w-full px-4 py-3 rounded-xl bg-[#F5F5F7] text-sm outline-none focus:ring-2 focus:ring-[#F26522]" placeholder={isAr ? 'أدخل اسمك' : 'Enter your name'} />
+                                    </div>
+                                    <div>
+                                        <label className="text-xs font-bold block mb-1">{isAr ? 'رقم الهاتف' : 'Phone Number'}</label>
+                                        <input required type="tel" className="w-full px-4 py-3 rounded-xl bg-[#F5F5F7] text-sm outline-none focus:ring-2 focus:ring-[#F26522]" placeholder="(407) 000-0000" />
+                                    </div>
+                                    <button type="submit" className="w-full py-3.5 rounded-full bg-[#F26522] text-white font-bold text-sm shadow hover:bg-[#d95314] transition">
+                                        {isAr ? 'تأكيد الطلب' : 'Confirm Request'}
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
