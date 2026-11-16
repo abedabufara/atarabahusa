@@ -1,272 +1,1743 @@
+<!DOCTYPE eet">
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATA RABAH USA | Thermal Break Architectural Aluminum Systems</title>
+    <title>ATA RABAH USA | Wood-Clad & Thermal-Break Aluminum Systems</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .aluminum-gradient {
-            background: linear-gradient(135deg, #1e2024 0%, #2d3138 50%, #16181c 100%);
+    <!-- Three.js for Real-Time 380-Degree 3D Wood-Clad Aluminum Corner Sample -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter for Apple-style crisp typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                    },
+                    colors: {
+                        applebg: '#ffffff',
+                        applegray: '#f5f5f7',
+                        appledark: '#1d1d1f',
+                        applemuted: '#6e6e73',
+                        ataorange: {
+                            DEFAULT: '#e86c1f',
+                            light: '#ff8538',
+                            dark: '#c4530e',
+                        },
+                        oakwood: '#9c6234'
+                    }
+                }
+            }
         }
-        .metallic-text {
-            background: linear-gradient(to right, #ffffff, #a1a1aa, #e4e4e7);
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1d1d1f;
+            overflow-x: hidden;
+        }
+
+        /* Apple Light Mode Typography & Gradients */
+        .ata-gradient-text {
+            background: linear-gradient(135deg, #e86c1f 0%, #b84a08 60%, #7c3509 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .apple-headline-gradient {
+            background: linear-gradient(180deg, #1d1d1f 0%, #434347 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Dark Brushed Anodized Aluminum Frame for Door Showcase */
+        .anodized-black-frame {
+            background: linear-gradient(135deg, #27272a 0%, #18181b 50%, #09090b 100%);
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Range Slider Custom Styling (Apple White + Ata Rabah Orange) */
+        input[type=range].apple-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            background: #e5e5ea;
+            height: 7px;
+            border-radius: 999px;
+            outline: none;
+        }
+        input[type=range].apple-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #e86c1f;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(232, 108, 31, 0.45);
+            border: 3px solid #ffffff;
+            transition: transform 0.15s ease;
+        }
+        input[type=range].apple-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        /* Callout Cards Smooth Transition */
+        .spec-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Subtle Architectural Grid on White Background */
+        .white-arch-grid {
+            background-size: 44px 44px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        }
+
+        /* English Badge Overlay that cleanly replaces Arabic text at bottom of uploaded photos */
+        .english-photo-ribbon {
+            background: linear-gradient(90deg, #e86c1f 0%, #f07d33 65%, rgba(232, 108, 31, 0.95) 100%);
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 antialiased selection:bg-zinc-700 selection:text-white">
+<body class="antialiased selection:bg-ataorange selection:text-white">
 
-    <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-zinc-300 to-zinc-600 rounded flex items-center justify-center font-extrabold text-zinc-950 text-xl tracking-tighter shadow-lg">
-                    AR
+    <!-- ===================================================================== -->
+    <!-- TOP NAVIGATION BAR (PURE WHITE FROSTED APPLE STYLE)                   -->
+    <!-- ===================================================================== -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-xl border-b border-zinc-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Official English ATA RABAH® Logo Badge (Matching Uploaded Images) -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="px-2.5 py-1.5 rounded-lg bg-white border-2 border-zinc-900 flex items-center gap-1.5 shadow-sm">
+                    <span class="font-black tracking-tighter text-zinc-900 text-sm">ATA</span>
+                    <span class="w-1.5 h-5 bg-ataorange rounded-sm inline-block"></span>
+                    <span class="font-black tracking-tighter text-ataorange text-sm">RABAH<sup class="text-[8px] text-zinc-700">®</sup></span>
                 </div>
-                <div>
-                    <span class="font-bold text-xl tracking-wider block leading-none text-white">ATA RABAH <span class="text-zinc-400 font-light">USA</span></span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-400 block mt-1">Architectural Aluminum Systems</span>
+                <div class="hidden sm:block">
+                    <span class="font-extrabold tracking-tight text-appledark text-sm block leading-none">USA OPERATIONS</span>
+                    <span class="text-[10px] text-applemuted tracking-widest uppercase block mt-0.5">Est. 1981 • Chicagoland</span>
                 </div>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium text-zinc-300">
-                <a href="#products" class="hover:text-white transition">Systems</a>
-                <a href="#specs" class="hover:text-white transition">Thermal Break Tech</a>
-                <a href="#builders" class="hover:text-white transition">For Builders & Contractors</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
-            </nav>
-            <a href="tel:4079103711" class="bg-white text-zinc-950 px-5 py-2.5 rounded text-sm font-semibold hover:bg-zinc-200 transition shadow">
-                (407) 910-3711
             </a>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-36 pb-24 md:pt-48 md:pb-32 aluminum-gradient border-b border-zinc-800 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-zinc-800/80 border border-zinc-700 text-xs uppercase tracking-widest text-zinc-300 mb-6">
-                    <span>Exclusive Midwest & USA Distribution</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight metallic-text mb-6">
-                    Engineered for Extreme Midwest Weather. Built for Modern Luxury.
-                </h1>
-                <p class="text-lg md:text-xl text-zinc-400 mb-10 leading-relaxed font-light">
-                    Premium heavy-duty thermal-break aluminum sliding doors, architectural windows, and motorized security shutters. Direct factory supply for custom home builders, developers, and luxury residences across Chicagoland.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="bg-white text-zinc-950 px-8 py-4 rounded font-semibold text-center hover:bg-zinc-200 transition shadow-lg">
-                        Request Trade Pricing & Specs
-                    </a>
-                    <a href="#products" class="px-8 py-4 rounded font-semibold text-center border border-zinc-700 hover:bg-zinc-800/60 transition text-zinc-200">
-                        Explore Product Lines
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Key Metrics / Value Props -->
-    <section class="py-12 bg-zinc-900 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <p class="text-3xl font-bold text-white">Thermal Break 20</p>
-                <p class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Advanced Polyamide Insulation</p>
-            </div>
-            <div>
-                <p class="text-3xl font-bold text-white">Chicago Climate</p>
-                <p class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Sub-Zero & Wind Load Tested</p>
-            </div>
-            <div>
-                <p class="text-3xl font-bold text-white">Direct Factory</p>
-                <p class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Unmatched Builder Margins</p>
-            </div>
-            <div>
-                <p class="text-3xl font-bold text-white">Custom Sizing</p>
-                <p class="text-xs uppercase tracking-wider text-zinc-400 mt-1">Oversized Panoramic Spans</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Product Lines -->
-    <section id="products" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Architectural Aluminum Systems</h2>
-            <p class="text-zinc-400 mt-3 max-w-2xl">Precision-extruded anodized and powder-coated aluminum profiles designed for floor-to-ceiling glass expanses without compromising thermal efficiency.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Product 1 -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-8 flex flex-col justify-between hover:border-zinc-600 transition">
-                <div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-2">Series 01</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Thermal-Break Sliding & Lift-Slide Doors</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                        Ultra-slim sightlines engineered for massive panoramic openings. Multi-point locking hardware, heavy-duty stainless steel rollers, and double or triple low-E tempered glazing.
-                    </p>
-                </div>
-                <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800 pt-4">
-                    <li>• Reinforced polyamide thermal barrier strips</li>
-                    <li>• Smooth single-finger glide operation</li>
-                    <li>• Custom matte black, bronze & anodized finishes</li>
-                </ul>
+            <div class="hidden lg:flex items-center gap-7 text-xs font-semibold text-zinc-600">
+                <a href="#interactive-door" class="hover:text-ataorange transition">1. Panoramic Sliding Door</a>
+                <a href="#corner-sample-380" class="text-ataorange font-bold flex items-center gap-1"><i class="fa-solid fa-cube"></i> 2. 380° Wood-Aluminum Sample</a>
+                <a href="#english-gallery" class="hover:text-ataorange transition">3. Product Gallery (English)</a>
+                <a href="#corporate-video" class="hover:text-ataorange transition">4. Official Video</a>
+                <a href="#chicagoland" class="hover:text-ataorange transition">5. USA Contact</a>
             </div>
 
-            <!-- Product 2 -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-8 flex flex-col justify-between hover:border-zinc-600 transition">
-                <div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-2">Series 02</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Architectural Casement & Tilt-Turn Windows</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                        High-performance acoustic and thermal insulation tailored for luxury residential builds and commercial facades. Dual compression weather seals eliminate drafts.
-                    </p>
-                </div>
-                <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800 pt-4">
-                    <li>• Superior U-Factor & SHGC ratings</li>
-                    <li>• Heavy-gauge extruded structural integrity</li>
-                    <li>• Concealed European hinge hardware</li>
-                </ul>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-lg p-8 flex flex-col justify-between hover:border-zinc-600 transition">
-                <div>
-                    <div class="text-xs font-semibold uppercase tracking-widest text-zinc-400 mb-2">Series 03</div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Integrated Motorized Security Shutters</h3>
-                    <p class="text-zinc-400 text-sm leading-relaxed mb-6">
-                        Foam-insulated aluminum rolling shutters seamlessly integrated into the window or door header for total blackout, storm protection, noise reduction, and security.
-                    </p>
-                </div>
-                <ul class="text-xs text-zinc-300 space-y-2 border-t border-zinc-800 pt-4">
-                    <li>• Smart home & wall-switch automation</li>
-                    <li>• High-density polyurethane thermal core</li>
-                    <li>• Extruded heavy-duty security slat options</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Thermal Break Engineering Section -->
-    <section id="specs" class="py-24 bg-zinc-900 border-y border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-xs uppercase tracking-widest text-zinc-400 font-semibold">Why Thermal Break 20?</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Built to Defeat Chicagoland Winters</h2>
-                <p class="text-zinc-400 leading-relaxed mb-6">
-                    Standard aluminum conducts cold directly into the home. ATA RABAH's **Thermal Break 20** system separates the interior and exterior aluminum profiles with a high-strength, glass-fiber reinforced polyamide barrier.
-                </p>
-                <div class="space-y-4 text-sm text-zinc-300">
-                    <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
-                        <strong class="text-white block mb-1">Zero Interior Condensation</strong>
-                        Prevents frost and moisture buildup on interior frames even during sub-zero Midwest freezes.
-                    </div>
-                    <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
-                        <strong class="text-white block mb-1">Acoustic Dampening</strong>
-                        Multi-chamber profile geometry paired with insulated glass units drastically cuts street and wind noise.
-                    </div>
-                    <div class="p-4 bg-zinc-950 rounded border border-zinc-800">
-                        <strong class="text-white block mb-1">Zero Warping or Rotting</strong>
-                        Unlike wood or vinyl, architectural-grade aluminum maintains razor-sharp alignment for decades with zero maintenance.
-                    </div>
-                </div>
-            </div>
-            <div class="bg-zinc-950 border border-zinc-800 p-8 rounded-lg">
-                <h3 class="text-xl font-bold text-white mb-6 border-b border-zinc-800 pb-4">Standard Technical Specifications</h3>
-                <div class="space-y-4 text-sm">
-                    <div class="flex justify-between py-2 border-b border-zinc-900">
-                        <span class="text-zinc-400">Alloy Grade</span>
-                        <span class="text-white font-medium">6063-T5 / T6 Architectural Aluminum</span>
-                    </div>
-                    <div class="flex justify-between py-2 border-b border-zinc-900">
-                        <span class="text-zinc-400">Thermal Barrier</span>
-                        <span class="text-white font-medium">20mm–34mm Polyamide PA66 GF25</span>
-                    </div>
-                    <div class="flex justify-between py-2 border-b border-zinc-900">
-                        <span class="text-zinc-400">Glazing Capacity</span>
-                        <span class="text-white font-medium">Double / Triple Low-E Argon Filled Tempered</span>
-                    </div>
-                    <div class="flex justify-between py-2 border-b border-zinc-900">
-                        <span class="text-zinc-400">Surface Treatment</span>
-                        <span class="text-white font-medium">Electrostatic Powder Coat / Brushed Anodized</span>
-                    </div>
-                    <div class="flex justify-between py-2">
-                        <span class="text-zinc-400">Distribution Hub</span>
-                        <span class="text-white font-medium">Orland Park & Greater Chicagoland, IL</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Builder & Contractor Partnership -->
-    <section id="builders" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="bg-gradient-to-r from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="max-w-2xl">
-                <h2 class="text-3xl font-bold text-white mb-4">Partner With ATA RABAH USA</h2>
-                <p class="text-zinc-300 leading-relaxed">
-                    We work directly with custom home builders, general contractors, and architects across Orland Park, Tinley Park, Hinsdale, Naperville, and the Greater Chicago area. Get direct container pricing, rapid air-freight sample turnarounds, and dedicated local support.
-                </p>
-            </div>
-            <div class="shrink-0">
-                <a href="#contact" class="inline-block bg-white text-zinc-950 font-bold px-8 py-4 rounded hover:bg-zinc-200 transition shadow-lg">
-                    Schedule a Consultation
+            <div class="flex items-center gap-2.5">
+                <button onclick="document.getElementById('photo-sync-modal').classList.toggle('hidden')" class="px-3 py-2 rounded-full bg-applegray hover:bg-zinc-200 text-appledark font-semibold text-xs transition flex items-center gap-1.5 border border-zinc-300/80" title="Load your local image files if needed">
+                    <i class="fa-solid fa-images text-ataorange"></i> <span class="hidden sm:inline">Sync Photos</span>
+                </button>
+                <a href="tel:4079103711" class="hidden md:flex items-center gap-1.5 text-xs font-bold text-appledark hover:text-ataorange px-3 py-2 rounded-full border border-zinc-200">
+                    <i class="fa-solid fa-phone text-ataorange"></i> 407-910-3711
+                </a>
+                <a href="#quote" class="bg-ataorange hover:bg-ataorange-dark text-white font-bold text-xs px-4 py-2.5 rounded-full transition shadow-md shadow-ataorange/25">
+                    Request Quote
                 </a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-zinc-900 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-3xl font-bold text-white mb-4">Get a Custom Quote or Book a Sample Viewing</h2>
-                <p class="text-zinc-400 mb-8">
-                    Submit your architectural plans, rough opening dimensions, or builder inquiry. Our US team will respond within 24 hours.
-                </p>
-                <div class="space-y-4 text-sm text-zinc-300">
-                    <p><strong class="text-white block">Abed Abufara</strong>Partner & Managing Director – USA</p>
-                    <p><strong class="text-white block">Location</strong>Orland Park / Chicagoland, Illinois</p>
-                    <p><strong class="text-white block">Direct Phone</strong><a href="tel:4079103711" class="hover:underline">(407) 910-3711</a></p>
-                    <p><strong class="text-white block">Email</strong><a href="mailto:abed@atarabah.com" class="hover:underline">abed@atarabah.com</a></p>
+    <!-- Optional Quick Local Photo Sync Bar (Lets user drop their 6 photos from Mac/iPhone anytime) -->
+    <div id="photo-sync-modal" class="hidden fixed top-16 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-zinc-200 shadow-xl p-4">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-xs text-zinc-700">
+                <strong class="text-ataorange"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Instant Local Photo Loader:</strong>
+                We have pre-configured your 6 uploaded Ata Rabah images with <strong>100% English translations</strong>. If you are previewing offline and want to select the 6 photos directly from your device to see them live inside the frames, select them here:
+            </div>
+            <div class="flex items-center gap-2">
+                <label class="cursor-pointer bg-ataorange hover:bg-ataorange-dark text-white text-xs font-bold px-4 py-2 rounded-full transition whitespace-nowrap">
+                    <i class="fa-solid fa-upload mr-1"></i> Select Your 6 Photos
+                    <input type="file" id="bulk-photo-input" multiple accept="image/*" class="hidden" onchange="handleBulkPhotoUpload(event)">
+                </label>
+                <button onclick="document.getElementById('photo-sync-modal').classList.add('hidden')" class="text-xs text-zinc-500 hover:text-zinc-900 px-2 py-1">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- HERO SECTION (PURE WHITE APPLE STYLE + ENGLISH TRANSLATED HEADLINES)  -->
+    <!-- ===================================================================== -->
+    <header class="relative pt-28 pb-14 sm:pt-36 sm:pb-20 px-4 text-center bg-white white-arch-grid border-b border-zinc-200/80 overflow-hidden">
+        <!-- Soft warm ambient glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[320px] bg-ataorange/10 blur-[130px] pointer-events-none rounded-full"></div>
+        
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-applegray border border-zinc-200 text-ataorange text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-ataorange animate-pulse"></span>
+                ATA RABAH® USA • Established 1981 • Orland Park & Chicagoland
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.06] mb-6 text-appledark">
+                Sliding Doors: <span class="ata-gradient-text">The Ultimate Solution.</span><br>
+                <span class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-zinc-700">Enjoy a Panoramic View.</span>
+            </h1>
+            
+            <p class="text-applemuted text-base sm:text-xl max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+                Experience <strong>Protection, Privacy, and Light Control</strong> with Ata Rabah's world-renowned <strong>Wood-Clad Thermal-Break Aluminum Systems</strong>, Triple-Glazed Panoramic Doors, Architectural Windows, and Motorized Shutters—engineered for extreme Midwest seasons.
+            </p>
+
+            <!-- Translated Highlights Pills from the 6 Uploaded Images -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-9 text-xs font-semibold text-zinc-700">
+                <span class="px-3.5 py-1.5 rounded-full bg-applegray border border-zinc-200"><i class="fa-solid fa-door-open text-ataorange mr-1.5"></i>Sliding Doors: The Ultimate Solution</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-applegray border border-zinc-200"><i class="fa-solid fa-mountain-sun text-ataorange mr-1.5"></i>Enjoy a Panoramic View</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-applegray border border-zinc-200"><i class="fa-solid fa-shield-halved text-ataorange mr-1.5"></i>Protection • Privacy • Light Control</span>
+                <span class="px-3.5 py-1.5 rounded-full bg-applegray border border-zinc-200"><i class="fa-solid fa-tree text-ataorange mr-1.5"></i>Wood-Clad Thermal-Break Aluminum</span>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <button onclick="scrollToShowcaseAndAnimate()" class="bg-appledark hover:bg-zinc-800 text-white font-bold px-7 py-3.5 rounded-full text-sm sm:text-base transition flex items-center gap-2.5 shadow-xl">
+                    <i class="fa-solid fa-sliders text-ataorange"></i> Open Interactive Sliding Door
+                </button>
+                <a href="#corner-sample-380" class="bg-ataorange hover:bg-ataorange-dark text-white font-extrabold px-7 py-3.5 rounded-full text-sm sm:text-base transition flex items-center gap-2.5 shadow-xl shadow-ataorange/25">
+                    <i class="fa-solid fa-rotate"></i> 380° Wood-Aluminum Corner Sample
+                </a>
+                <a href="#english-gallery" class="bg-applegray hover:bg-zinc-200 text-appledark border border-zinc-300 font-bold px-6 py-3.5 rounded-full text-sm sm:text-base transition flex items-center gap-2">
+                    <i class="fa-solid fa-images text-ataorange"></i> View All 6 Systems in English
+                </a>
+            </div>
+
+            <div class="mt-10 flex items-center justify-center gap-2 text-zinc-400 text-xs font-semibold uppercase tracking-widest animate-bounce">
+                <i class="fa-solid fa-angles-down text-ataorange"></i> Scroll Down for Apple-Style Motion Engineering
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- APPLE-STYLE SCROLL ANIMATION #1: PANORAMIC SLIDING DOOR & SHUTTER     -->
+    <!-- (Combines Photos 1, 2 & 4 in English on a Pure White Stage)           -->
+    <!-- ===================================================================== -->
+    <section id="interactive-door" class="relative h-[270vh] bg-white border-b border-zinc-200">
+        <div class="sticky top-16 h-[calc(100vh-4rem)] w-full flex flex-col items-center justify-between py-4 sm:py-6 px-4 overflow-hidden white-arch-grid">
+            
+            <!-- Dynamic Scroll Status Header -->
+            <div class="text-center z-20 max-w-3xl mx-auto">
+                <span id="stage-badge" class="text-[11px] font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full bg-ataorange/10 text-ataorange border border-ataorange/30">
+                    SLIDING DOORS: THE ULTIMATE SOLUTION
+                </span>
+                <h2 id="stage-heading" class="text-xl sm:text-3xl font-black text-appledark mt-2 transition-all duration-300">
+                    Scroll down or slide below to glide open the panoramic door
+                </h2>
+            </div>
+
+            <!-- Main Interactive Stage (Door + Floating Apple Callouts on White) -->
+            <div class="relative w-full max-w-6xl flex-1 flex items-center justify-center my-1">
+                
+                <!-- LEFT FLOATING CALLOUTS (English Translations from Photos 1 & 2) -->
+                <div class="hidden lg:flex flex-col gap-5 w-72 z-20 pr-4">
+                    <!-- Spec 1 -->
+                    <div id="spec-1" class="spec-card opacity-30 -translate-x-8 bg-white p-4 rounded-2xl border border-zinc-200 shadow-xl">
+                        <div class="flex items-center gap-3 mb-1.5">
+                            <div class="w-8 h-8 rounded-lg bg-ataorange/15 flex items-center justify-center text-ataorange">
+                                <i class="fa-solid fa-door-open"></i>
+                            </div>
+                            <h3 class="font-extrabold text-appledark text-sm">Sliding Doors: The Ultimate Solution</h3>
+                        </div>
+                        <p class="text-xs text-applemuted leading-relaxed">
+                            Multi-panel heavy-duty black anodized aluminum profiles engineered for smooth floor-to-ceiling transitions under wood-slat and stone porticos.
+                        </p>
+                        <div class="mt-2 text-[11px] font-bold text-ataorange">ATA RABAH® SIGNATURE SERIES</div>
+                    </div>
+
+                    <!-- Spec 2 -->
+                    <div id="spec-2" class="spec-card opacity-30 -translate-x-8 bg-white p-4 rounded-2xl border border-zinc-200 shadow-xl">
+                        <div class="flex items-center gap-3 mb-1.5">
+                            <div class="w-8 h-8 rounded-lg bg-ataorange/15 flex items-center justify-center text-ataorange">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                            </div>
+                            <h3 class="font-extrabold text-appledark text-sm">Enjoy a Panoramic View</h3>
+                        </div>
+                        <p class="text-xs text-applemuted leading-relaxed">
+                            Ultra-slim structural interlock mullions maximize natural daylight and frame expansive landscape views with crystal-clear Low-E tempered glass.
+                        </p>
+                        <div class="mt-2 text-[11px] font-bold text-ataorange">45dB Acoustic & UV Shield</div>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- ARCHITECTURAL PATIO FRAME (MATCHING PHOTOS 1, 2 & 4)      -->
+                <!-- ========================================================= -->
+                <div class="relative w-full max-w-[560px] h-[330px] sm:h-[420px] rounded-2xl overflow-hidden shadow-[0_25px_70px_rgba(0,0,0,0.18)] border-4 border-zinc-200 bg-white flex flex-col select-none">
+                    
+                    <!-- Top Wood-Slat Ceiling Soffit with Recessed Spotlights (Exact match to Photo 1) -->
+                    <div class="h-10 sm:h-12 w-full bg-gradient-to-r from-[#5c3a21] via-[#7c4d2b] to-[#4a2e19] border-b-4 border-zinc-900 flex items-center justify-around px-8 relative">
+                        <div class="w-3 h-2 rounded-full bg-amber-200 shadow-[0_0_12px_#fde68a]"></div>
+                        <span class="text-[10px] font-mono font-bold tracking-widest text-amber-100/90 uppercase">ATA RABAH® • PANORAMIC VILLA SERIES</span>
+                        <div class="w-3 h-2 rounded-full bg-amber-200 shadow-[0_0_12px_#fde68a]"></div>
+                    </div>
+
+                    <!-- Main Frame with Left/Right White Stone Pillars (Matching Photo 1) -->
+                    <div class="relative flex-1 flex bg-[#e5e7eb]">
+                        <!-- Left White Split-Face Stone Wall Pillar -->
+                        <div class="w-6 sm:w-8 h-full bg-[#f3f2ee] border-r-4 border-zinc-900 flex flex-col justify-between py-2 opacity-95" style="background-image: repeating-linear-gradient(0deg, #e5e4df, #e5e4df 10px, #f7f6f2 10px, #f7f6f2 20px);"></div>
+
+                        <!-- Center Black Aluminum Multi-Panel Sliding Door System -->
+                        <div class="relative flex-1 h-full bg-gradient-to-b from-sky-200 via-emerald-100 to-amber-50 overflow-hidden flex flex-col justify-between">
+                            
+                            <!-- Scenic Green Hillside & Luxury Patio View Behind Glass (Matching Photo 2 & 4) -->
+                            <div class="absolute inset-0 pointer-events-none">
+                                <!-- Sky & Sunlit Hills -->
+                                <div class="w-full h-[58%] bg-gradient-to-b from-sky-400/40 via-sky-200/50 to-emerald-200/40"></div>
+                                <!-- Lush Green Landscape -->
+                                <div class="w-full h-[42%] bg-gradient-to-t from-[#dcd8d0] via-[#658c58]/30 to-[#84a974]/40"></div>
+                            </div>
+
+                            <!-- MOTORIZED SECURITY SHUTTER OVERLAY (Matching Photo 4: Protection, Privacy, Light Control) -->
+                            <div id="interactive-shutter-curtain" class="absolute top-0 left-0 right-0 bg-gradient-to-b from-zinc-900 via-zinc-800 to-zinc-900 z-30 transition-all duration-500 overflow-hidden border-b-4 border-ataorange shadow-2xl" style="height: 0%; background-size: 100% 10px; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 2px, transparent 2px, transparent 10px);">
+                                <div class="h-full flex flex-col items-center justify-center text-center p-4">
+                                    <span class="px-3 py-1 rounded-full bg-ataorange text-white font-extrabold text-[10px] uppercase tracking-widest mb-1">
+                                        MOTORIZED SHUTTER ACTIVE
+                                    </span>
+                                    <div class="text-white font-black text-base sm:text-xl tracking-wide">
+                                        PROTECTION • PRIVACY • LIGHT CONTROL
+                                    </div>
+                                    <div class="text-zinc-300 text-xs mt-1"> Foam-Filled Thermal & Security Aluminum Slats</div>
+                                </div>
+                            </div>
+
+                            <!-- Top Status Badges Inside Opening -->
+                            <div class="relative z-10 flex justify-between items-start p-3">
+                                <span class="px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md text-[10px] font-bold text-appledark shadow-sm border border-zinc-200">
+                                    <i class="fa-solid fa-eye text-ataorange mr-1"></i> ENJOY A PANORAMIC VIEW
+                                </span>
+                                <span id="open-percentage" class="px-2.5 py-1 rounded-md bg-ataorange text-white font-mono font-extrabold text-xs shadow-sm">
+                                    0% OPEN
+                                </span>
+                            </div>
+
+                            <!-- Center Revealed Engineering Specs When Door Opens -->
+                            <div id="revealed-core-info" class="relative z-10 my-auto max-w-[260px] ml-auto mr-3 sm:mr-6 text-right opacity-0 transition-opacity duration-300 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-zinc-200 shadow-lg">
+                                <div class="inline-block px-2 py-0.5 rounded bg-ataorange/15 text-ataorange text-[10px] font-extrabold uppercase mb-1">
+                                    SLIDING DOORS: THE ULTIMATE SOLUTION
+                                </div>
+                                <h4 class="text-sm sm:text-base font-black text-appledark leading-tight">
+                                    Zero-Threshold Stainless Gliding Track
+                                </h4>
+                                <p class="text-[11px] text-applemuted mt-1 leading-relaxed">
+                                    Engineered for effortless 1-finger movement, complete sound isolation (45dB), and -10°C thermal-break protection.
+                                </p>
+                            </div>
+
+                            <!-- Bottom Marble Patio Floor Reflection -->
+                            <div class="relative z-10 w-full h-4 bg-gradient-to-r from-zinc-800 via-zinc-600 to-zinc-800 flex items-center px-2">
+                                <div class="w-full h-[2px] bg-ataorange"></div>
+                            </div>
+
+                            <!-- LEFT FIXED PANORAMIC GLASS LITE (50% Width) -->
+                            <div class="absolute top-0 bottom-0 left-0 w-1/2 border-r-[6px] border-zinc-900 bg-sky-900/[0.06] backdrop-blur-[0.5px] flex flex-col justify-between p-3 pointer-events-none">
+                                <div class="text-[9px] font-mono font-bold text-zinc-700 bg-white/75 px-2 py-0.5 rounded w-fit">FIXED PANORAMIC PANEL</div>
+                                <div class="text-[9px] font-mono font-bold text-zinc-700 bg-white/75 px-2 py-0.5 rounded w-fit">TRIPLE LOW-E GLASS</div>
+                            </div>
+
+                            <!-- RIGHT ACTIVE SLIDING BLACK ALUMINUM DOOR PANEL (Moves on Scroll) -->
+                            <div id="sliding-door-panel" class="absolute top-0 bottom-0 right-0 w-[53%] anodized-black-frame p-2.5 sm:p-3 shadow-2xl border-l-2 border-ataorange transition-transform duration-75 ease-out z-20 flex">
+                                <div class="relative w-full h-full rounded bg-gradient-to-tr from-sky-500/15 via-white/25 to-sky-200/20 backdrop-blur-[1px] border border-white/30 overflow-hidden flex flex-col justify-between p-3.5">
+                                    
+                                    <div class="flex justify-between items-center z-10">
+                                        <span class="text-[10px] font-extrabold tracking-wider text-white bg-zinc-900/80 px-2 py-0.5 rounded">ATA RABAH®</span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" id="lock-indicator"></span>
+                                    </div>
+
+                                    <!-- Center English Caption on Glass -->
+                                    <div class="my-auto text-center z-10 bg-zinc-900/80 backdrop-blur-md py-2.5 px-3 rounded-xl border border-white/15">
+                                        <div class="text-[11px] sm:text-xs font-extrabold tracking-widest text-white uppercase">SLIDING DOORS</div>
+                                        <div class="text-[10px] text-ataorange font-bold tracking-wider uppercase mt-0.5">The Ultimate Solution</div>
+                                    </div>
+
+                                    <div class="text-[9px] font-mono font-bold text-white bg-zinc-900/75 px-2 py-0.5 rounded text-center z-10">
+                                        <i class="fa-solid fa-arrow-left mr-1 text-ataorange"></i> SCROLL TO GLIDE OPEN
+                                    </div>
+
+                                    <!-- Matte Black / Orange Architectural Handle -->
+                                    <div class="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-28 sm:h-36 rounded-full bg-zinc-900 border-2 border-ataorange shadow-lg flex flex-col items-center justify-between py-2">
+                                        <div class="w-1 h-1 rounded-full bg-ataorange"></div>
+                                        <div class="w-1 h-1 rounded-full bg-ataorange"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Right White Split-Face Stone Wall Pillar -->
+                        <div class="w-6 sm:w-8 h-full bg-[#f3f2ee] border-l-4 border-zinc-900" style="background-image: repeating-linear-gradient(0deg, #e5e4df, #e5e4df 10px, #f7f6f2 10px, #f7f6f2 20px);"></div>
+                    </div>
+                </div>
+
+                <!-- RIGHT FLOATING CALLOUTS (English Translations from Photos 3 & 4) -->
+                <div class="hidden lg:flex flex-col gap-5 w-72 z-20 pl-4">
+                    <!-- Spec 3 -->
+                    <div id="spec-3" class="spec-card opacity-30 translate-x-8 bg-white p-4 rounded-2xl border border-zinc-200 shadow-xl">
+                        <div class="flex items-center gap-3 mb-1.5">
+                            <div class="w-8 h-8 rounded-lg bg-ataorange/15 flex items-center justify-center text-ataorange">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="font-extrabold text-appledark text-sm">Protection • Privacy • Light Control</h3>
+                        </div>
+                        <p class="text-xs text-applemuted leading-relaxed">
+                            Pair your panoramic doors with Ata Rabah motorized aluminum shutters for instant privacy, storm defense, and 100% room darkening.
+                        </p>
+                        <button onclick="toggleInteractiveShutter()" class="mt-2 text-[11px] font-extrabold text-white bg-ataorange hover:bg-ataorange-dark px-2.5 py-1 rounded-md transition">
+                            <i class="fa-solid fa-arrows-up-down mr-1"></i> Test Motorized Shutter
+                        </button>
+                    </div>
+
+                    <!-- Spec 4 -->
+                    <div id="spec-4" class="spec-card opacity-30 translate-x-8 bg-white p-4 rounded-2xl border border-zinc-200 shadow-xl">
+                        <div class="flex items-center gap-3 mb-1.5">
+                            <div class="w-8 h-8 rounded-lg bg-ataorange/15 flex items-center justify-center text-ataorange">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <h3 class="font-extrabold text-appledark text-sm">Thermal-Break 20 Certified</h3>
+                        </div>
+                        <p class="text-xs text-applemuted leading-relaxed">
+                            Polyamide thermal barrier prevents frost and condensation down to -10°C, slashing heating and cooling costs across Chicagoland.
+                        </p>
+                        <div class="mt-2 text-[11px] font-bold text-ataorange">German Multi-Point Hardware</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- INTERACTIVE MANUAL SCRUBBER, SHUTTER TOGGLE & AUTO-PLAY BAR -->
+            <div class="w-full max-w-2xl bg-applegray/95 backdrop-blur-xl border border-zinc-300 rounded-2xl p-3 sm:p-4 z-30 shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-2 text-xs mb-2">
+                    <span class="text-appledark font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-sliders text-ataorange"></i> Interactive Door & Shutter Control
+                    </span>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleInteractiveShutter()" id="shutter-toggle-btn" class="px-3 py-1 rounded-full bg-white hover:bg-zinc-100 text-appledark font-bold transition text-xs flex items-center gap-1.5 border border-zinc-300 shadow-sm">
+                            <i class="fa-solid fa-blinds text-ataorange"></i> Lower Shutter (Privacy/Light)
+                        </button>
+                        <button onclick="toggleAutoSlide()" id="autoplay-btn" class="px-3.5 py-1 rounded-full bg-ataorange hover:bg-ataorange-dark text-white font-bold transition text-xs flex items-center gap-1.5 shadow-sm">
+                            <i class="fa-solid fa-play"></i> Auto-Open Door
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-[10px] font-mono text-zinc-500 uppercase font-bold">Closed</span>
+                    <input type="range" id="door-scrubber" min="0" max="100" value="0" class="apple-slider">
+                    <span class="text-[10px] font-mono text-ataorange uppercase font-extrabold">100% Open</span>
                 </div>
             </div>
 
-            <form action="mailto:abed@atarabah.com" method="POST" enctype="text/plain" class="bg-zinc-950 p-8 rounded-lg border border-zinc-800 space-y-5">
-                <div>
-                    <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-2">Full Name / Company</label>
-                    <input type="text" name="name" required class="w-full bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-white focus:outline-none focus:border-zinc-500" placeholder="John Doe / Custom Homes LLC">
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-2">Phone Number</label>
-                        <input type="tel" name="phone" required class="w-full bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-white focus:outline-none focus:border-zinc-500" placeholder="(312) 555-0199">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-2">Email Address</label>
-                        <input type="email" name="email" required class="w-full bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-white focus:outline-none focus:border-zinc-500" placeholder="you@company.com">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-xs uppercase tracking-wider text-zinc-400 mb-2">Project Type & Details</label>
-                    <textarea name="project" rows="4" class="w-full bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-white focus:outline-none focus:border-zinc-500" placeholder="Tell us about your build, door/window quantities, or schedule an in-person sample demonstration..."></textarea>
-                </div>
-                <button type="submit" class="w-full bg-white text-zinc-950 font-bold py-3.5 rounded hover:bg-zinc-200 transition">
-                    Send Inquiry
-                </button>
-            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8 bg-zinc-950 border-t border-zinc-900 text-center text-xs text-zinc-500">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>© 2026 ATA RABAH USA | Thermal Break Architectural Systems. All rights reserved.</p>
-            <p>Orland Park & Chicagoland, IL • www.atarabahusa.com</p>
+    <!-- ===================================================================== -->
+    <!-- APPLE-STYLE SCROLL ANIMATION #2: 380° ROTATING "WOOD-CLAD ALUMINUM"   -->
+    <!-- TRIPLE-GLAZED CORNER SAMPLE (EXACT MATCH TO UPLOADED PHOTO 5)         -->
+    <!-- ===================================================================== -->
+    <section id="corner-sample-380" class="relative h-[320vh] bg-applegray border-b border-zinc-200">
+        <div class="sticky top-16 h-[calc(100vh-4rem)] w-full flex flex-col items-center justify-between py-4 sm:py-6 px-4 overflow-hidden white-arch-grid">
+            
+            <!-- Soft Warm Studio Spotlight -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] bg-ataorange/10 blur-[110px] rounded-full pointer-events-none"></div>
+
+            <!-- Top Section Header & Live Degree Badge -->
+            <div class="text-center z-20 max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-ataorange/40 text-ataorange text-[11px] font-mono font-extrabold uppercase tracking-widest shadow-sm">
+                    <i class="fa-solid fa-cube animate-spin" style="animation-duration: 8s;"></i>
+                    WOOD-CLAD THERMAL-BREAK ALUMINUM • <span id="corner-degree-badge" class="text-appledark">0° / 380°</span>
+                </div>
+                <h2 id="corner-stage-title" class="text-xl sm:text-4xl font-black text-appledark mt-2 tracking-tight">
+                    Wood-Finish Aluminum Corner Sample — 380° Interactive Inspection
+                </h2>
+                <p id="corner-stage-subtitle" class="text-xs sm:text-sm text-applemuted mt-1">
+                    Scroll down or drag the 3D cutaway sample to inspect the Natural Oak Cladding, Triple-Glazed Glass (3 Panes), and Thermal-Break Core.
+                </p>
+            </div>
+
+            <!-- Center Stage: Left Specs + 3D Wood-Clad Corner Sample + Right Specs -->
+            <div class="relative w-full max-w-7xl flex-1 flex items-center justify-center my-1">
+                
+                <!-- LEFT DYNAMIC ENGINEERING CALLOUTS (0° - 190°) -->
+                <div class="hidden lg:flex flex-col gap-5 w-80 z-20">
+                    <!-- Layer 1: 0° - 95° (Translated from "الألمنيوم الخشابي") -->
+                    <div id="c-card-1" class="spec-card p-4 rounded-2xl bg-white border-2 border-ataorange shadow-xl">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-ataorange text-white font-extrabold">0° – 95° • WOOD-CLAD FACE</span>
+                            <i class="fa-solid fa-tree text-ataorange"></i>
+                        </div>
+                        <h3 class="text-base font-extrabold text-appledark">1. Wood-Clad Aluminum ("Wood-Finish")</h3>
+                        <p class="text-xs text-applemuted mt-1 leading-relaxed">
+                            Authentic warm oak wood-grain architectural finish bonded to heavy-duty extruded aluminum—delivering timeless luxury without rotting, warping, or repainting.
+                        </p>
+                    </div>
+
+                    <!-- Layer 2: 95° - 190° (Triple Glazing seen in Photo 5) -->
+                    <div id="c-card-2" class="spec-card opacity-35 -translate-x-4 p-4 rounded-2xl bg-white border border-zinc-200 shadow-md">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-sky-100 text-sky-800 border border-sky-300 font-bold">95° – 190° • TRIPLE GLAZING</span>
+                            <i class="fa-solid fa-layer-group text-ataorange"></i>
+                        </div>
+                        <h3 class="text-base font-extrabold text-appledark">2. Triple-Glazed Low-E Glass (3 Panes)</h3>
+                        <p class="text-xs text-applemuted mt-1 leading-relaxed">
+                            Three distinct tempered glass panes separated by dual warm-edge desiccant spacers and Argon gas—blocking 45dB of street noise and extreme heat/cold.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3D CANVAS CONTAINER + PHOTO PIP COMPARATOR -->
+                <div class="relative w-full max-w-[470px] h-[300px] sm:h-[390px] flex items-center justify-center bg-white rounded-3xl border border-zinc-200/90 shadow-2xl">
+                    <canvas id="corner-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing z-10"></canvas>
+
+                    <!-- Live Pointer Hotspot Badge Overlaid on Sample -->
+                    <div id="corner-live-hotspot" class="absolute top-3 left-3 sm:left-5 z-20 bg-white/95 backdrop-blur-md border-l-4 border-ataorange rounded-xl px-3.5 py-2 shadow-md pointer-events-none">
+                        <div class="text-[9px] font-mono text-ataorange uppercase font-extrabold" id="hotspot-angle-tag">ANGLE: 0° • WOOD-CLAD MITRE CORNER</div>
+                        <div class="text-xs font-black text-appledark" id="hotspot-part-name">Natural Oak Wood-Finish Aluminum Profile</div>
+                    </div>
+
+                    <!-- Reference Badge to Photo 5 -->
+                    <div class="absolute bottom-3 right-3 z-20 bg-applegray border border-zinc-300 rounded-xl px-3 py-1.5 flex items-center gap-2 pointer-events-none">
+                        <span class="w-2.5 h-2.5 rounded-full bg-ataorange"></span>
+                        <span class="text-[10px] font-bold text-appledark">Orange Contour = Cross-Section Seal Line</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT DYNAMIC ENGINEERING CALLOUTS (190° - 380°) -->
+                <div class="hidden lg:flex flex-col gap-5 w-80 z-20">
+                    <!-- Layer 3: 190° - 285° -->
+                    <div id="c-card-3" class="spec-card opacity-35 translate-x-4 p-4 rounded-2xl bg-white border border-zinc-200 shadow-md">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-800 text-white font-bold">190° – 285° • THERMAL CORE</span>
+                            <i class="fa-solid fa-temperature-arrow-down text-ataorange"></i>
+                        </div>
+                        <h3 class="text-base font-extrabold text-appledark">3. Multi-Chamber Thermal-Break Core</h3>
+                        <p class="text-xs text-applemuted mt-1 leading-relaxed">
+                            Black polyamide PA66 GF25 thermal break struts lock the inner and outer chambers while stopping 99% of thermal transfer during -10°C Chicago winters.
+                        </p>
+                    </div>
+
+                    <!-- Layer 4: 285° - 380° -->
+                    <div id="c-card-4" class="spec-card opacity-35 translate-x-4 p-4 rounded-2xl bg-white border border-zinc-200 shadow-md">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-ataorange/15 text-ataorange border border-ataorange/30 font-bold">285° – 380° • EPDM CONTOUR</span>
+                            <i class="fa-solid fa-compass-drafting text-ataorange"></i>
+                        </div>
+                        <h3 class="text-base font-extrabold text-appledark">4. Triple EPDM Gaskets & Orange Contour</h3>
+                        <p class="text-xs text-applemuted mt-1 leading-relaxed">
+                            Highlighted by Ata Rabah's signature orange profile contour line—continuous EPDM compression gaskets guarantee zero air or water infiltration.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MOBILE / TABLET ACTIVE SPEC CARD (Shown on < lg screens) -->
+            <div class="lg:hidden w-full max-w-xl bg-white border-2 border-ataorange rounded-2xl p-3.5 z-20 shadow-md">
+                <div class="flex items-center justify-between text-[10px] font-mono font-bold text-ataorange mb-1">
+                    <span id="m-corner-stage">STAGE 1 OF 4 (0° - 95°)</span>
+                    <span>WOOD-CLAD TRIPLE-GLAZED SAMPLE</span>
+                </div>
+                <div id="m-corner-title" class="text-sm font-black text-appledark">1. Wood-Clad Aluminum ("Wood-Finish")</div>
+                <p id="m-corner-desc" class="text-xs text-applemuted mt-0.5">Warm natural oak aesthetics bonded to structural extruded aluminum with zero maintenance.</p>
+            </div>
+
+            <!-- 380° INTERACTIVE SCRUBBER & AUTO-ROTATE BAR -->
+            <div class="w-full max-w-2xl bg-white border border-zinc-300 rounded-2xl p-3 sm:p-4 z-30 shadow-lg">
+                <div class="flex flex-wrap items-center justify-between gap-2 text-xs mb-2">
+                    <span class="text-appledark font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate text-ataorange"></i> 380° Wood-Aluminum Corner Controller (Scroll, Drag 3D Model, or Slide)
+                    </span>
+                    <div class="flex items-center gap-2">
+                        <button onclick="toggleCornerExplode()" id="explode-corner-btn" class="px-3 py-1 rounded-full bg-applegray hover:bg-zinc-200 text-appledark font-bold transition text-xs flex items-center gap-1.5 border border-zinc-300">
+                            <i class="fa-solid fa-arrows-up-down-left-right text-ataorange"></i> Expand Layers
+                        </button>
+                        <button onclick="toggleCornerAutoRotate()" id="corner-autorotate-btn" class="px-3.5 py-1 rounded-full bg-ataorange hover:bg-ataorange-dark text-white font-extrabold transition text-xs flex items-center gap-1.5 shadow-md">
+                            <i class="fa-solid fa-play"></i> Auto-Rotate 380°
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-[10px] font-mono text-zinc-500 font-bold">0°</span>
+                    <input type="range" id="corner-scrubber" min="0" max="380" value="0" class="apple-slider">
+                    <span class="text-[10px] font-mono text-ataorange font-extrabold">380°</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- ALL 6 UPLOADED PHOTOS WITH 100% ENGLISH TRANSLATIONS & PROPER USAGE   -->
+    <!-- ===================================================================== -->
+    <section id="english-gallery" class="py-20 sm:py-24 px-4 bg-white max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="text-ataorange text-xs font-extrabold uppercase tracking-widest">Official Ata Rabah® Architectural Portfolio</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-appledark mt-2">
+                    Engineered Systems — Presented in English
+                </h2>
+            </div>
+            <p class="text-applemuted max-w-md text-sm sm:text-base">
+                Every showcase below features your exact Ata Rabah architectural photography and technical cross-sections with clean English titles and specifications for the US market.
+            </p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 mb-10">
+            <button onclick="filterPortfolio('all', event)" class="portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-ataorange text-white shadow-sm transition">
+                All 6 Featured Systems
+            </button>
+            <button onclick="filterPortfolio('sliding', event)" class="portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-applegray text-appledark hover:bg-zinc-200 border border-zinc-200 transition">
+                Sliding & Panoramic Doors
+            </button>
+            <button onclick="filterPortfolio('wood-clad', event)" class="portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-applegray text-appledark hover:bg-zinc-200 border border-zinc-200 transition">
+                Wood-Clad Aluminum (Triple-Glazed)
+            </button>
+            <button onclick="filterPortfolio('shutters', event)" class="portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-applegray text-appledark hover:bg-zinc-200 border border-zinc-200 transition">
+                Motorized Shutters
+            </button>
+            <button onclick="filterPortfolio('windows-arches', event)" class="portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-applegray text-appledark hover:bg-zinc-200 border border-zinc-200 transition">
+                Windows & Custom Arches
+            </button>
+        </div>
+
+        <!-- 6-Card Grid Matching the Exact 6 Uploaded Images -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+
+            <!-- CARD 1: Image 1 (3ABD101C-7C2F-426F-AF13-24A59FECAEBE.png) -> "Sliding Doors: The Ultimate Solution" -->
+            <div data-category="sliding" class="portfolio-card bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-0" src="3ABD101C-7C2F-426F-AF13-24A59FECAEBE.png" 
+                             alt="Sliding Doors: The Ultimate Solution - Ata Rabah"
+                             onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <!-- Clean English ATA RABAH® Top-Left Badge -->
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <!-- Clean English Bottom Ribbon (Replaces Arabic "أبواب سحاب الحل الأمثل") -->
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider">Sliding Doors: The Ultimate Solution</span>
+                            <span class="text-[10px] font-mono opacity-90">WWW.ATARABAHUSA.COM</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">01 • MULTI-PANEL SLIDING DOORS</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Sliding Doors: The Ultimate Solution</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Corner and multi-track black thermal-break aluminum sliding doors designed for modern stone and wood-ceiling terraces. Effortless gliding with maximum weather sealing.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#quote" onclick="selectProduct('Thermal-Break Sliding Doors')" class="block w-full text-center py-3 rounded-xl bg-applegray hover:bg-ataorange hover:text-white text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Quote for Sliding Doors
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD 2: Image 2 (2579E84C-49EF-4C48-BE09-D98835DB6DBA.png) -> "Enjoy a Panoramic View" -->
+            <div data-category="sliding" class="portfolio-card bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-1" src="2579E84C-49EF-4C48-BE09-D98835DB6DBA.png" 
+                             alt="Enjoy a Panoramic View - Ata Rabah Sliding Systems"
+                             onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <!-- Clean English Bottom Ribbon (Replaces Arabic "استمتع بإطلالة بانورامية") -->
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider"><i class="fa-solid fa-mountain-sun mr-1"></i> Enjoy a Panoramic View</span>
+                            <span class="text-[10px] font-mono opacity-90">PANORAMIC SERIES</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">02 • ULTRA-SLIM PANORAMIC GLASS WALLS</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Enjoy a Panoramic View</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Expansive floor-to-ceiling glass spans with minimal aluminum sightlines and Solar Low-E coating—turning your surrounding landscape into living art while blocking UV heat.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#quote" onclick="selectProduct('Thermal-Break Sliding Doors')" class="block w-full text-center py-3 rounded-xl bg-applegray hover:bg-ataorange hover:text-white text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Panoramic System Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD 3: Image 4 (0372E742-C5EF-4039-A2F9-94B0FAE19178.png) -> "Protection • Privacy • Light Control (Shutters)" -->
+            <div data-category="shutters" class="portfolio-card bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-3" src="0372E742-C5EF-4039-A2F9-94B0FAE19178.png" 
+                             alt="Protection, Privacy, Light Control - Ata Rabah Shutters"
+                             onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <!-- Clean English Top-Right Overlay (Replaces Arabic "حماية، خصوصية، تحكم بالإضاءة") -->
+                        <div class="absolute top-3 right-3 bg-zinc-900/90 backdrop-blur-md text-white px-3 py-2 rounded-xl border border-white/15 text-right shadow-lg">
+                            <div class="text-[10px] font-extrabold uppercase tracking-wider text-white">PROTECTION</div>
+                            <div class="text-xs font-black uppercase tracking-wider text-ataorange">PRIVACY</div>
+                            <div class="text-[10px] font-extrabold uppercase tracking-wider text-white">LIGHT CONTROL</div>
+                        </div>
+
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider"><i class="fa-solid fa-blinds mr-1"></i> Motorized Shutters</span>
+                            <span class="text-[10px] font-mono opacity-90">WWW.ATARABAHUSA.COM</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">03 • ARCHITECTURAL ROLLER SHUTTERS</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Protection • Privacy • Light Control</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Concealed motorized aluminum shutters integrated directly above floor-to-ceiling windows and patio doors. Control sunlight, privacy, and home security at the touch of a button.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#quote" onclick="selectProduct('Security Shutters')" class="block w-full text-center py-3 rounded-xl bg-applegray hover:bg-ataorange hover:text-white text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Motorized Shutters Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD 4: Image 5 (406B1FF2-ED59-464A-8B5C-4AB5D51DF31E.png) -> "Wood-Clad Thermal-Break Aluminum" -->
+            <div data-category="wood-clad" class="portfolio-card bg-white rounded-3xl border-2 border-ataorange overflow-hidden shadow-xl hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-4" src="406B1FF2-ED59-464A-8B5C-4AB5D51DF31E.png" 
+                             alt="Wood-Clad Thermal-Break Aluminum Triple Glazed - Ata Rabah"
+                             onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <!-- Clean English Bottom Ribbon (Replaces Arabic "الألمنيوم الخشابي") -->
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider"><i class="fa-solid fa-tree mr-1"></i> Wood-Clad Aluminum (Triple-Glazed)</span>
+                            <span class="text-[10px] font-mono font-bold bg-white text-ataorange px-2 py-0.5 rounded">380° MODEL ABOVE</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">04 • WOOD-FINISH THERMAL-BREAK SERIES</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Wood-Clad Thermal-Break Aluminum</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Combines the rich warmth of natural oak wood on the face with a multi-chamber thermal-break aluminum core and Triple-Glazed Low-E glass (3 panes) for ultimate Midwest insulation.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 flex gap-2">
+                    <a href="#corner-sample-380" class="flex-1 text-center py-3 rounded-xl bg-ataorange text-white font-extrabold text-xs transition shadow-md">
+                        Inspect in 380° 3D
+                    </a>
+                    <a href="#quote" onclick="selectProduct('Wood-Clad Thermal-Break Systems')" class="flex-1 text-center py-3 rounded-xl bg-applegray hover:bg-zinc-200 text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Sample
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD 5: Image 3 (7839BFFC-C8BE-47D2-8211-2D3FAD649FC9.png) -> "Windows: Architectural Villa Series" -->
+            <div data-category="windows-arches" class="portfolio-card bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-2" src="7839BFFC-C8BE-47D2-8211-2D3FAD649FC9.png" 
+                             alt="Architectural Windows - Ata Rabah USA"
+                             onerror="this.src='https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider"><i class="fa-solid fa-table-columns mr-1"></i> Architectural Windows</span>
+                            <span class="text-[10px] font-mono opacity-90">WWW.ATARABAHUSA.COM</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">05 • MODERN VILLA WINDOWS</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Precision Architectural Windows</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Large-format fixed picture windows and European Tilt & Turn casements that harmonize effortlessly with limestone facades and contemporary wood pivot entryways.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#quote" onclick="selectProduct('Advanced Window Systems')" class="block w-full text-center py-3 rounded-xl bg-applegray hover:bg-ataorange hover:text-white text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Windows Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD 6: Image 6 (ED5AE960-EB00-4905-9FA5-50A4FF181EEC.png) -> "Custom Arched & Heritage Doors" -->
+            <div data-category="windows-arches" class="portfolio-card bg-white rounded-3xl border border-zinc-200 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col justify-between group">
+                <div>
+                    <div class="relative h-64 bg-applegray overflow-hidden">
+                        <img id="user-img-5" src="ED5AE960-EB00-4905-9FA5-50A4FF181EEC.png" 
+                             alt="Custom Arched & Heritage Aluminum Systems - Ata Rabah"
+                             onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=85'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        
+                        <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-md border border-zinc-200 flex items-center gap-1.5">
+                            <span class="font-black text-xs text-appledark">ATA</span>
+                            <span class="w-1 h-3.5 bg-ataorange rounded-sm"></span>
+                            <span class="font-black text-xs text-ataorange">RABAH®</span>
+                        </div>
+
+                        <div class="absolute bottom-0 inset-x-0 english-photo-ribbon text-white px-4 py-2.5 flex items-center justify-between shadow-lg">
+                            <span class="font-extrabold text-xs uppercase tracking-wider"><i class="fa-solid fa-archway mr-1"></i> Custom Arched & Heritage Systems</span>
+                            <span class="text-[10px] font-mono opacity-90">BESPOKE CURVED</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="text-[11px] font-extrabold text-ataorange uppercase tracking-wider mb-1">06 • BESPOKE ARCHED & GEORGIAN GRIDS</div>
+                        <h3 class="text-xl font-black text-appledark mb-2">Custom Arched Transoms & Patio Doors</h3>
+                        <p class="text-xs text-applemuted leading-relaxed mb-4">
+                            Precision CNC-bent arched aluminum frames with decorative internal Georgian bars—custom fabricated to fit classical stone arches and luxury estates across Illinois.
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <a href="#quote" onclick="selectProduct('Custom Arched & Heritage Systems')" class="block w-full text-center py-3 rounded-xl bg-applegray hover:bg-ataorange hover:text-white text-appledark font-bold text-xs transition border border-zinc-200">
+                        Request Custom Arch Quote
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- OFFICIAL ATA RABAH VIDEO SHOWCASE (LIGHT THEME + FILE/URL LOADER)     -->
+    <!-- ===================================================================== -->
+    <section id="corporate-video" class="py-20 px-4 bg-applegray border-y border-zinc-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-ataorange text-xs font-extrabold uppercase tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-circle-play"></i> Official Ata Rabah Documentary & Factory Reel (Est. 1981)
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-appledark mt-2">
+                        40+ Years of Architectural Manufacturing
+                    </h2>
+                </div>
+                <div class="flex flex-wrap items-center gap-2.5">
+                    <button onclick="toggleVideoAudio()" class="px-4 py-2 rounded-full bg-white hover:bg-zinc-100 border border-zinc-300 text-xs font-bold text-appledark flex items-center gap-2 transition shadow-sm">
+                        <i class="fa-solid fa-volume-high text-ataorange"></i> English Voiceover
+                    </button>
+                    <label class="cursor-pointer px-4 py-2 rounded-full bg-ataorange hover:bg-ataorange-dark text-xs font-bold text-white flex items-center gap-2 transition shadow-sm">
+                        <i class="fa-solid fa-video"></i> Upload Video File (.mp4)
+                        <input type="file" accept="video/*" class="hidden" onchange="handleLocalVideoFile(event)">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Cinema Frame Container -->
+            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-zinc-900 aspect-video">
+                <video id="ata-official-video" class="w-full h-full object-cover hidden" playsinline loop controls></video>
+                <canvas id="factory-cinema-canvas" class="w-full h-full block"></canvas>
+
+                <!-- Cinema Overlay UI -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/40 flex flex-col justify-between p-5 sm:p-8 pointer-events-none">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2.5 bg-white/95 px-3.5 py-1.5 rounded-full shadow-md">
+                            <span class="w-2.5 h-2.5 rounded-full bg-ataorange animate-ping"></span>
+                            <span class="text-[11px] font-extrabold tracking-wider text-appledark">ATA RABAH® OFFICIAL SHOWREEL</span>
+                        </div>
+                        <div class="hidden sm:flex items-center gap-2 bg-ataorange text-white px-3 py-1 rounded-full text-xs font-bold">
+                            ENGLISH EDITION • WWW.ATARABAHUSA.COM
+                        </div>
+                    </div>
+
+                    <div class="my-auto text-center max-w-3xl mx-auto px-4">
+                        <div id="video-chapter-pill" class="inline-block px-3.5 py-1 rounded-full bg-ataorange text-white font-extrabold text-[10px] sm:text-xs uppercase tracking-widest mb-3 shadow-lg">
+                            SCENE 01 / 04 • SLIDING DOORS: THE ULTIMATE SOLUTION
+                        </div>
+                        <h3 id="video-scene-title" class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight drop-shadow-2xl">
+                            Crafting Quality, Enhancing Durability Since 1981
+                        </h3>
+                        <p id="video-scene-desc" class="text-xs sm:text-base text-zinc-200 mt-3 max-w-2xl mx-auto drop-shadow">
+                            From our regional mega-factories to Orland Park & Chicagoland—discover how Ata Rabah engineers Wood-Clad Thermal-Break Aluminum, Panoramic Doors, and Motorized Shutters.
+                        </p>
+                    </div>
+
+                    <div class="pointer-events-auto bg-white/95 backdrop-blur-xl border border-zinc-200 rounded-2xl p-3 sm:p-4 flex flex-wrap items-center justify-between gap-4 shadow-xl">
+                        <div class="flex items-center gap-3">
+                            <button onclick="toggleCinemaPlay()" id="cinema-play-btn" class="w-10 h-10 rounded-xl bg-ataorange hover:bg-ataorange-dark text-white flex items-center justify-center font-bold text-base transition shadow-md">
+                                <i class="fa-solid fa-pause" id="cinema-play-icon"></i>
+                            </button>
+                            <div>
+                                <div class="text-xs font-extrabold text-appledark" id="cinema-status-label">Playing Official Ata Rabah Showcase</div>
+                                <div class="text-[10px] text-applemuted font-mono">4 Chapters • All Titles Translated to English</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-1.5 sm:gap-2">
+                            <button onclick="setCinemaScene(0)" class="scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-ataorange text-white transition">1. Sliding Doors</button>
+                            <button onclick="setCinemaScene(1)" class="scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-applegray text-appledark hover:bg-zinc-200 transition">2. Wood-Aluminum</button>
+                            <button onclick="setCinemaScene(2)" class="scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-applegray text-appledark hover:bg-zinc-200 transition">3. Shutters</button>
+                            <button onclick="setCinemaScene(3)" class="scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-applegray text-appledark hover:bg-zinc-200 transition">4. Chicagoland HQ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- CHICAGOLAND & MIDWEST B2B OPERATIONS + QUOTE FORM (CLEAN WHITE)       -->
+    <!-- ===================================================================== -->
+    <section id="chicagoland" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left Executive Info -->
+            <div class="lg:col-span-5 bg-applegray p-8 rounded-3xl border border-zinc-200/90 shadow-lg">
+                <span class="text-ataorange text-xs font-extrabold uppercase tracking-widest">US Headquarters • Orland Park, Illinois</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-appledark mt-2">
+                    Factory-Direct Supply for Chicagoland Contractors & Homeowners
+                </h2>
+                <p class="text-applemuted mt-3 text-sm leading-relaxed">
+                    Led by <strong>Abed Abufara (Partner & Managing Director – USA)</strong>, Ata Rabah USA delivers custom-manufactured Wood-Clad Thermal-Break Aluminum systems, panoramic sliding doors, custom arched windows, and motorized security shutters directly to projects across Illinois and the Midwest.
+                </p>
+
+                <div class="mt-6 pt-6 border-t border-zinc-300 space-y-3.5 text-sm">
+                    <div class="text-xs font-mono uppercase font-extrabold text-ataorange">Direct Executive Contact</div>
+                    <div class="text-xl font-black text-appledark">Abed Abufara</div>
+                    
+                    <a href="tel:4079103711" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white hover:border-ataorange border border-zinc-200 transition shadow-sm">
+                        <i class="fa-solid fa-phone text-ataorange text-lg w-6 text-center"></i>
+                        <div>
+                            <div class="text-[11px] text-applemuted">Direct Phone</div>
+                            <div class="font-extrabold text-appledark">407-910-3711</div>
+                        </div>
+                    </a>
+                    <a href="mailto:abed@atarabah.com" class="flex items-center gap-3 p-3.5 rounded-2xl bg-white hover:border-ataorange border border-zinc-200 transition shadow-sm">
+                        <i class="fa-solid fa-envelope text-ataorange text-lg w-6 text-center"></i>
+                        <div>
+                            <div class="text-[11px] text-applemuted">Official Email</div>
+                            <div class="font-extrabold text-appledark">abed@atarabah.com</div>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-zinc-200 shadow-sm">
+                        <i class="fa-solid fa-location-dot text-ataorange text-lg w-6 text-center"></i>
+                        <div>
+                            <div class="text-[11px] text-applemuted">Service Area & Showroom</div>
+                            <div class="font-extrabold text-appledark">Orland Park / Chicagoland & Midwest</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Contractor Quote Form -->
+            <div id="quote" class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border-2 border-zinc-200 shadow-xl">
+                <span class="text-ataorange text-xs font-extrabold uppercase tracking-widest">Project Estimates & Architectural Bids</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-appledark mt-1 mb-2">
+                    Request a Custom Quote
+                </h3>
+                <p class="text-applemuted text-xs sm:text-sm mb-6">
+                    Select any of the systems shown above to request factory-direct pricing or schedule an on-site consultation with Abed Abufara.
+                </p>
+
+                <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-appledark mb-1.5">Full Name / Company Name *</label>
+                            <input type="text" id="q-name" required placeholder="e.g., Gander Builders / John Smith" class="w-full px-4 py-3 rounded-xl bg-applegray border border-zinc-300 text-appledark text-sm focus:border-ataorange focus:bg-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-appledark mb-1.5">Phone Number *</label>
+                            <input type="tel" id="q-phone" required placeholder="e.g., (708) 555-0199" class="w-full px-4 py-3 rounded-xl bg-applegray border border-zinc-300 text-appledark text-sm focus:border-ataorange focus:bg-white focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-appledark mb-1.5">Email Address *</label>
+                            <input type="email" id="q-email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-applegray border border-zinc-300 text-appledark text-sm focus:border-ataorange focus:bg-white focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-appledark mb-1.5">Selected Ata Rabah System *</label>
+                            <select id="q-system" class="w-full px-4 py-3 rounded-xl bg-applegray border border-zinc-300 text-appledark text-sm font-semibold focus:border-ataorange focus:bg-white focus:outline-none">
+                                <option value="Thermal-Break Sliding Doors">Sliding Doors: The Ultimate Solution (Panoramic)</option>
+                                <option value="Wood-Clad Thermal-Break Systems">Wood-Clad Thermal-Break Aluminum (Triple-Glazed)</option>
+                                <option value="Security Shutters">Motorized Shutters (Protection, Privacy, Light Control)</option>
+                                <option value="Advanced Window Systems">Precision Architectural Windows</option>
+                                <option value="Custom Arched & Heritage Systems">Custom Arched & Heritage Aluminum Systems</option>
+                                <option value="Full Custom Project Package">Full Villa / Commercial Project Package</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-appledark mb-1.5">Project Location, Rough Sizes & Notes</label>
+                        <textarea id="q-details" rows="4" placeholder="Tell us about your build in Orland Park / Chicagoland, window/door schedule, or preferred wood/aluminum finish..." class="w-full px-4 py-3 rounded-xl bg-applegray border border-zinc-300 text-appledark text-sm focus:border-ataorange focus:bg-white focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl bg-ataorange hover:bg-ataorange-dark text-white font-black text-base transition shadow-lg shadow-ataorange/25 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Send Quote Request to Ata Rabah USA
+                    </button>
+                </form>
+
+                <div id="quoteSuccessBox" class="hidden mt-5 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-center">
+                    <div class="text-emerald-700 font-extrabold text-sm mb-1">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Quote Request Formatted for Abed Abufara!
+                    </div>
+                    <p class="text-xs text-emerald-900 mb-2" id="quoteSuccessText"></p>
+                    <a id="mailtoFallbackLink" href="mailto:abed@atarabah.com" class="inline-block px-4 py-2 rounded-lg bg-ataorange text-white font-bold text-xs">
+                        Open Email Client Directly
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Clean White & Gray) -->
+    <footer class="bg-applegray border-t border-zinc-200 py-10 px-4 text-center text-xs text-applemuted">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+                <div class="px-2 py-1 rounded bg-white border border-zinc-800 font-black text-appledark text-xs">
+                    ATA <span class="text-ataorange">RABAH®</span>
+                </div>
+                <span class="text-appledark font-extrabold">USA OPERATIONS</span>
+                <span>| www.atarabahusa.com</span>
+            </div>
+            <div class="font-medium">
+                Orland Park & Chicagoland, Illinois • Phone: <a href="tel:4079103711" class="text-ataorange font-bold hover:underline">407-910-3711</a> • Email: <a href="mailto:abed@atarabah.com" class="text-ataorange font-bold hover:underline">abed@atarabah.com</a>
+            </div>
+            <div>
+                &copy; 2026 Ata Rabah USA. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
+    <!-- ===================================================================== -->
+    <!-- JAVASCRIPT: APPLE SCROLL ANIMATIONS & 380° WOOD-CLAD 3D ENGINE        -->
+    <!-- ===================================================================== -->
+    <script>
+        // 1. BULK PHOTO SYNC LOADER (If user selects their 6 photos from device)
+        function handleBulkPhotoUpload(event) {
+            const files = Array.from(event.target.files);
+            files.forEach((file, idx) => {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const targetImg = document.getElementById(`user-img-${idx % 6}`);
+                    if (targetImg) targetImg.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            });
+            document.getElementById('photo-sync-modal').classList.add('hidden');
+        }
+
+        function handleLocalVideoFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const url = URL.createObjectURL(file);
+            const vid = document.getElementById('ata-official-video');
+            vid.src = url;
+            vid.classList.remove('hidden');
+            document.getElementById('factory-cinema-canvas').classList.add('hidden');
+            vid.play();
+        }
+
+        // 2. PANORAMIC SLIDING DOOR & MOTORIZED SHUTTER ENGINE
+        const showcaseSection = document.getElementById('interactive-door');
+        const slidingDoorPanel = document.getElementById('sliding-door-panel');
+        const doorScrubber = document.getElementById('door-scrubber');
+        const openPercentage = document.getElementById('open-percentage');
+        const revealedCoreInfo = document.getElementById('revealed-core-info');
+        const stageBadge = document.getElementById('stage-badge');
+        const stageHeading = document.getElementById('stage-heading');
+        const lockIndicator = document.getElementById('lock-indicator');
+        const shutterCurtain = document.getElementById('interactive-shutter-curtain');
+
+        const spec1 = document.getElementById('spec-1');
+        const spec2 = document.getElementById('spec-2');
+        const spec3 = document.getElementById('spec-3');
+        const spec4 = document.getElementById('spec-4');
+
+        let isManualOverride = false;
+        let autoSlideInterval = null;
+        let isShutterLowered = false;
+
+        function toggleInteractiveShutter() {
+            isShutterLowered = !isShutterLowered;
+            const btn = document.getElementById('shutter-toggle-btn');
+            if (isShutterLowered) {
+                shutterCurtain.style.height = '62%';
+                btn.innerHTML = `<i class="fa-solid fa-blinds-open text-ataorange"></i> Raise Motorized Shutter`;
+                stageBadge.textContent = "MOTORIZED SHUTTERS: PROTECTION • PRIVACY • LIGHT CONTROL";
+            } else {
+                shutterCurtain.style.height = '0%';
+                btn.innerHTML = `<i class="fa-solid fa-blinds text-ataorange"></i> Lower Shutter (Privacy/Light)`;
+            }
+        }
+
+        function updateDoorAnimation(percent) {
+            const p = Math.max(0, Math.min(100, percent));
+            doorScrubber.value = p;
+            openPercentage.textContent = `${Math.round(p)}% OPEN`;
+
+            const translateX = -(p * 0.84);
+            slidingDoorPanel.style.transform = `translateX(${translateX}%)`;
+            revealedCoreInfo.style.opacity = p > 32 ? Math.min(1, (p - 32) / 35) : 0;
+
+            if (p > 5) {
+                lockIndicator.className = "w-2.5 h-2.5 rounded-full bg-ataorange shadow-[0_0_8px_#e86c1f]";
+            } else {
+                lockIndicator.className = "w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]";
+            }
+
+            if (!isShutterLowered) {
+                if (p < 18) {
+                    stageBadge.textContent = "SLIDING DOORS: THE ULTIMATE SOLUTION";
+                    stageHeading.textContent = "Scroll down or drag slider to glide open the panoramic door";
+                } else if (p < 55) {
+                    stageBadge.textContent = "ENJOY A PANORAMIC VIEW • ULTRA-SLIM PROFILES";
+                    stageHeading.textContent = "Seamless indoor-outdoor living with 45dB acoustic insulation";
+                } else if (p < 85) {
+                    stageBadge.textContent = "PROTECTION • PRIVACY • LIGHT CONTROL";
+                    stageHeading.textContent = "Optional concealed motorized shutters & multi-point security locks";
+                } else {
+                    stageBadge.textContent = "ATA RABAH® USA • ENGINEERED FOR CHICAGOLAND";
+                    stageHeading.textContent = "Full panoramic opening with -10°C Thermal-Break protection";
+                }
+            }
+
+            toggleWhiteCard(spec1, p >= 10, 'left');
+            toggleWhiteCard(spec2, p >= 32, 'left');
+            toggleWhiteCard(spec3, p >= 55, 'right');
+            toggleWhiteCard(spec4, p >= 75, 'right');
+        }
+
+        function toggleWhiteCard(el, isActive, side) {
+            if (!el) return;
+            if (isActive) {
+                el.classList.remove('opacity-30', side === 'left' ? '-translate-x-8' : 'translate-x-8', 'border-zinc-200');
+                el.classList.add('opacity-100', 'translate-x-0', 'border-ataorange', 'border-2');
+            } else {
+                el.classList.add('opacity-30', side === 'left' ? '-translate-x-8' : 'translate-x-8', 'border-zinc-200');
+                el.classList.remove('opacity-100', 'translate-x-0', 'border-ataorange', 'border-2');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (isManualOverride) return;
+            const rect = showcaseSection.getBoundingClientRect();
+            const scrollableDistance = showcaseSection.offsetHeight - window.innerHeight;
+            if (scrollableDistance <= 0) return;
+
+            const rawProgress = (-rect.top / scrollableDistance) * 100;
+            if (rawProgress >= -10 && rawProgress <= 110) {
+                updateDoorAnimation(rawProgress);
+            }
+        }, { passive: true });
+
+        doorScrubber.addEventListener('input', (e) => {
+            stopAutoSlide();
+            isManualOverride = true;
+            updateDoorAnimation(parseFloat(e.target.value));
+            setTimeout(() => { isManualOverride = false; }, 1500);
+        });
+
+        function toggleAutoSlide() {
+            const btn = document.getElementById('autoplay-btn');
+            if (autoSlideInterval) {
+                stopAutoSlide();
+                return;
+            }
+            isManualOverride = true;
+            let current = parseFloat(doorScrubber.value);
+            let direction = current >= 95 ? -1.5 : 1.5;
+            btn.innerHTML = `<i class="fa-solid fa-pause"></i> Pause`;
+
+            autoSlideInterval = setInterval(() => {
+                current += direction;
+                updateDoorAnimation(current);
+                if (current >= 100 || current <= 0) {
+                    stopAutoSlide();
+                }
+            }, 20);
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+            }
+            const btn = document.getElementById('autoplay-btn');
+            if (btn) btn.innerHTML = `<i class="fa-solid fa-play"></i> Auto-Open Door`;
+            setTimeout(() => { isManualOverride = false; }, 1000);
+        }
+
+        function scrollToShowcaseAndAnimate() {
+            showcaseSection.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                if (parseFloat(doorScrubber.value) < 20) {
+                    toggleAutoSlide();
+                }
+            }, 700);
+        }
+
+        // =====================================================================
+        // 3. THREE.JS 380° WOOD-CLAD TRIPLE-GLAZED CORNER SAMPLE (PHOTO 5 MATCH)
+        // =====================================================================
+        const cornerSection = document.getElementById('corner-sample-380');
+        const cornerCanvas = document.getElementById('corner-3d-canvas');
+        const cornerScrubber = document.getElementById('corner-scrubber');
+        const cornerDegreeBadge = document.getElementById('corner-degree-badge');
+
+        let scene, camera, renderer, cornerGroup;
+        let oakWoodGroup, thermalCoreGroup, tripleGlassGroup, orangeContourGroup;
+        let isCornerManual = false;
+        let isCornerExploded = false;
+        let cornerAutoInterval = null;
+        let currentCornerDeg = 25; // Start at 25° angle matching Photo 5!
+
+        // Procedural Natural Oak Wood-Grain Texture Generator for Realistic Wood-Clad Aluminum
+        function createOakWoodTexture() {
+            const c = document.createElement('canvas');
+            c.width = 512;
+            c.height = 512;
+            const ctx = c.getContext('2d');
+            ctx.fillStyle = '#b5733d';
+            ctx.fillRect(0, 0, 512, 512);
+
+            for (let i = 0; i < 400; i++) {
+                ctx.fillStyle = i % 2 === 0 ? 'rgba(120, 62, 22, 0.16)' : 'rgba(215, 148, 88, 0.14)';
+                const x = Math.random() * 512;
+                const w = 2 + Math.random() * 6;
+                ctx.fillRect(x, 0, w, 512);
+            }
+            const tex = new THREE.CanvasTexture(c);
+            tex.wrapS = THREE.RepeatWrapping;
+            tex.wrapT = THREE.RepeatWrapping;
+            return tex;
+        }
+
+        function initCorner3D() {
+            if (!cornerCanvas || typeof THREE === 'undefined') return;
+
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(36, cornerCanvas.clientWidth / cornerCanvas.clientHeight, 0.1, 1000);
+            camera.position.set(0, 1.8, 7.3);
+            camera.lookAt(0, 0, 0);
+
+            renderer = new THREE.WebGLRenderer({ canvas: cornerCanvas, alpha: true, antialias: true });
+            renderer.setSize(cornerCanvas.clientWidth, cornerCanvas.clientHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Bright Apple Studio Lighting on White Background
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
+            scene.add(ambientLight);
+
+            const keyLight = new THREE.DirectionalLight(0xffffff, 1.25);
+            keyLight.position.set(6, 10, 8);
+            scene.add(keyLight);
+
+            const warmFillLight = new THREE.DirectionalLight(0xffedd5, 0.9);
+            warmFillLight.position.set(-7, 3, 5);
+            scene.add(warmFillLight);
+
+            cornerGroup = new THREE.Group();
+            scene.add(cornerGroup);
+
+            oakWoodGroup = new THREE.Group();
+            thermalCoreGroup = new THREE.Group();
+            tripleGlassGroup = new THREE.Group();
+            orangeContourGroup = new THREE.Group();
+
+            cornerGroup.add(oakWoodGroup);
+            cornerGroup.add(thermalCoreGroup);
+            cornerGroup.add(tripleGlassGroup);
+            cornerGroup.add(orangeContourGroup);
+
+            const oakTex = createOakWoodTexture();
+            const oakWoodMat = new THREE.MeshStandardMaterial({
+                map: oakTex,
+                roughness: 0.42,
+                metalness: 0.08
+            });
+
+            const darkAnodizedChamberMat = new THREE.MeshStandardMaterial({
+                color: 0x1f2024,
+                metalness: 0.8,
+                roughness: 0.3
+            });
+
+            const silverChamberEdgeMat = new THREE.MeshStandardMaterial({
+                color: 0xd4d4d8,
+                metalness: 0.88,
+                roughness: 0.2
+            });
+
+            const blackGasketMat = new THREE.MeshStandardMaterial({
+                color: 0x111113,
+                roughness: 0.9
+            });
+
+            const clearGlassMat = new THREE.MeshPhysicalMaterial({
+                color: 0xcffafe,
+                transparent: true,
+                opacity: 0.52,
+                metalness: 0.05,
+                roughness: 0.05,
+                reflectivity: 0.95
+            });
+
+            const ataOrangeLineMat = new THREE.MeshBasicMaterial({
+                color: 0xe86c1f
+            });
+
+            // 1. NATURAL OAK WOOD-CLAD L-SHAPED MITRE FRAME (Exact Match to Photo 5)
+            const vWoodFace = new THREE.Mesh(new THREE.BoxGeometry(0.95, 2.8, 0.55), oakWoodMat);
+            vWoodFace.position.set(-0.85, 0.15, 0.48);
+            const hWoodFace = new THREE.Mesh(new THREE.BoxGeometry(2.8, 0.95, 0.55), oakWoodMat);
+            hWoodFace.position.set(0.15, -0.85, 0.48);
+
+            // Stepped Inner Oak Wood Glazing Bead (Matching Photo 5 bevel)
+            const vWoodBead = new THREE.Mesh(new THREE.BoxGeometry(0.35, 2.35, 0.35), oakWoodMat);
+            vWoodBead.position.set(-0.32, 0.35, 0.42);
+            const hWoodBead = new THREE.Mesh(new THREE.BoxGeometry(2.35, 0.35, 0.35), oakWoodMat);
+            hWoodBead.position.set(0.35, -0.32, 0.42);
+            oakWoodGroup.add(vWoodFace, hWoodFace, vWoodBead, hWoodBead);
+
+            // 2. BLACK/SILVER MULTI-CHAMBER THERMAL-BREAK ALUMINUM CORE (Seen on right bottom cutaway of Photo 5)
+            const vCore = new THREE.Mesh(new THREE.BoxGeometry(0.92, 2.76, 0.68), darkAnodizedChamberMat);
+            vCore.position.set(-0.85, 0.15, -0.15);
+            const hCore = new THREE.Mesh(new THREE.BoxGeometry(2.76, 0.92, 0.68), darkAnodizedChamberMat);
+            hCore.position.set(0.15, -0.85, -0.15);
+
+            // Silver Cutaway Cross-Section Ribs (Visible at the cut ends)
+            const rib1 = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.92, 0.68), silverChamberEdgeMat);
+            rib1.position.set(1.54, -0.85, -0.15);
+            const rib2 = new THREE.Mesh(new THREE.BoxGeometry(0.92, 0.06, 0.68), silverChamberEdgeMat);
+            rib2.position.set(-0.85, 1.54, -0.15);
+            thermalCoreGroup.add(vCore, hCore, rib1, rib2);
+
+            // 3. TRIPLE-GLAZED LOW-E GLASS UNIT (3 DISTINCT GLASS PANES + 2 ARGON SPACERS AS IN PHOTO 5)
+            const pane1 = new THREE.Mesh(new THREE.BoxGeometry(1.85, 1.85, 0.09), clearGlassMat);
+            pane1.position.set(0.62, 0.62, 0.20);
+            const pane2 = new THREE.Mesh(new THREE.BoxGeometry(1.85, 1.85, 0.09), clearGlassMat);
+            pane2.position.set(0.62, 0.62, 0.0);
+            const pane3 = new THREE.Mesh(new THREE.BoxGeometry(1.85, 1.85, 0.09), clearGlassMat);
+            pane3.position.set(0.62, 0.62, -0.20);
+
+            // Black EPDM Glazing Gaskets & Silver Desiccant Spacer Bars
+            const gasketV = new THREE.Mesh(new THREE.BoxGeometry(0.14, 1.9, 0.62), blackGasketMat);
+            gasketV.position.set(-0.22, 0.62, 0);
+            const gasketH = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.14, 0.62), blackGasketMat);
+            gasketH.position.set(0.62, -0.22, 0);
+            tripleGlassGroup.add(pane1, pane2, pane3, gasketV, gasketH);
+
+            // 4. SIGNATURE ATA RABAH ORANGE HIGHLIGHT CONTOUR LINE (Exact Match to Photo 5)
+            const orangeV = new THREE.Mesh(new THREE.BoxGeometry(0.06, 1.92, 0.06), ataOrangeLineMat);
+            orangeV.position.set(-0.14, 0.62, 0.28);
+            const orangeH = new THREE.Mesh(new THREE.BoxGeometry(1.92, 0.06, 0.06), ataOrangeLineMat);
+            orangeH.position.set(0.62, -0.14, 0.28);
+            const orangeCut = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.98, 0.06), ataOrangeLineMat);
+            orangeCut.position.set(1.58, -0.85, -0.15);
+            orangeContourGroup.add(orangeV, orangeH, orangeCut);
+
+            // Mouse & Touch Orbit Dragging
+            let isDragging = false;
+            let prevX = 0;
+
+            cornerCanvas.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                isCornerManual = true;
+                prevX = e.clientX;
+            });
+            window.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    setTimeout(() => { isCornerManual = false; }, 1500);
+                }
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const delta = e.clientX - prevX;
+                prevX = e.clientX;
+                let nextDeg = currentCornerDeg + delta * 0.85;
+                if (nextDeg < 0) nextDeg += 380;
+                if (nextDeg > 380) nextDeg = 380;
+                updateCornerSample380(nextDeg);
+            });
+
+            cornerCanvas.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1) {
+                    isDragging = true;
+                    isCornerManual = true;
+                    prevX = e.touches[0].clientX;
+                }
+            }, { passive: true });
+            window.addEventListener('touchend', () => {
+                isDragging = false;
+                setTimeout(() => { isCornerManual = false; }, 1500);
+            });
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging || e.touches.length !== 1) return;
+                const delta = e.touches[0].clientX - prevX;
+                prevX = e.touches[0].clientX;
+                let nextDeg = currentCornerDeg + delta * 0.85;
+                if (nextDeg < 0) nextDeg = 0;
+                if (nextDeg > 380) nextDeg = 380;
+                updateCornerSample380(nextDeg);
+            }, { passive: true });
+
+            animateCorner3D();
+        }
+
+        function animateCorner3D() {
+            requestAnimationFrame(animateCorner3D);
+            if (!renderer || !scene || !camera) return;
+
+            const rad = ((currentCornerDeg - 25) * Math.PI) / 180;
+            if (cornerGroup) {
+                cornerGroup.rotation.y += (rad - cornerGroup.rotation.y) * 0.12;
+                cornerGroup.rotation.x = 0.18 + Math.sin(rad * 0.5) * 0.15;
+            }
+
+            const explodeFactor = isCornerExploded ? 0.36 : (currentCornerDeg > 95 && currentCornerDeg < 285 ? 0.14 : 0);
+            if (oakWoodGroup && thermalCoreGroup && tripleGlassGroup) {
+                oakWoodGroup.position.z += (explodeFactor - oakWoodGroup.position.z) * 0.1;
+                thermalCoreGroup.position.z += (-explodeFactor - thermalCoreGroup.position.z) * 0.1;
+                tripleGlassGroup.position.x += ((explodeFactor * 0.5) - tripleGlassGroup.position.x) * 0.1;
+                tripleGlassGroup.position.y += ((explodeFactor * 0.5) - tripleGlassGroup.position.y) * 0.1;
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        function updateCornerSample380(deg) {
+            currentCornerDeg = Math.max(0, Math.min(380, deg));
+            const rounded = Math.round(currentCornerDeg);
+            if (cornerScrubber) cornerScrubber.value = rounded;
+            if (cornerDegreeBadge) cornerDegreeBadge.textContent = `${rounded}° / 380°`;
+
+            const c1 = document.getElementById('c-card-1');
+            const c2 = document.getElementById('c-card-2');
+            const c3 = document.getElementById('c-card-3');
+            const c4 = document.getElementById('c-card-4');
+
+            const hotspotAngle = document.getElementById('hotspot-angle-tag');
+            const hotspotName = document.getElementById('hotspot-part-name');
+            const mStage = document.getElementById('m-corner-stage');
+            const mTitle = document.getElementById('m-corner-title');
+            const mDesc = document.getElementById('m-corner-desc');
+
+            [c1, c2, c3, c4].forEach((c, idx) => {
+                if (!c) return;
+                c.className = "spec-card opacity-35 p-4 rounded-2xl bg-white border border-zinc-200 shadow-md " + (idx < 2 ? "-translate-x-4" : "translate-x-4");
+            });
+
+            const activeClass = "spec-card opacity-100 translate-x-0 p-4 rounded-2xl bg-white border-2 border-ataorange shadow-xl";
+
+            if (rounded < 95) {
+                if (c1) c1.className = activeClass;
+                hotspotAngle.textContent = `ANGLE: ${rounded}° • WOOD-CLAD ARCHITECTURAL FACE`;
+                hotspotName.textContent = "Natural Oak Wood-Finish Aluminum Profile";
+                mStage.textContent = `STAGE 1 OF 4 (${rounded}° / 380°)`;
+                mTitle.textContent = "1. Wood-Clad Aluminum ('Wood-Finish')";
+                mDesc.textContent = "Warm natural oak aesthetics bonded to structural extruded aluminum—zero maintenance.";
+            } else if (rounded < 190) {
+                if (c2) c2.className = activeClass;
+                hotspotAngle.textContent = `ANGLE: ${rounded}° • TRIPLE-GLAZED LOW-E UNIT`;
+                hotspotName.textContent = "3 Tempered Glass Panes + Dual Argon Spacers";
+                mStage.textContent = `STAGE 2 OF 4 (${rounded}° / 380°)`;
+                mTitle.textContent = "2. Triple-Glazed Low-E Glass (3 Panes)";
+                mDesc.textContent = "Three layers of tempered glass provide 45dB soundproofing and superior thermal retention.";
+            } else if (rounded < 285) {
+                if (c3) c3.className = activeClass;
+                hotspotAngle.textContent = `ANGLE: ${rounded}° • THERMAL-BREAK 20 CORE`;
+                hotspotName.textContent = "Multi-Chamber Aluminum + Polyamide PA66 Bridge";
+                mStage.textContent = `STAGE 3 OF 4 (${rounded}° / 380°)`;
+                mTitle.textContent = "3. Multi-Chamber Thermal-Break Core";
+                mDesc.textContent = "Prevents condensation and freezing down to -10°C during harsh Chicago winters.";
+            } else {
+                if (c4) c4.className = activeClass;
+                hotspotAngle.textContent = `ANGLE: ${rounded}° • PRECISION SEAL CONTOUR`;
+                hotspotName.textContent = "Triple EPDM Weather Gaskets & Corner Cleat";
+                mStage.textContent = `STAGE 4 OF 4 (${rounded}° / 380°)`;
+                mTitle.textContent = "4. Triple EPDM Gaskets & Orange Contour";
+                mDesc.textContent = "Continuous weather seals highlighted by Ata Rabah's signature orange contour line.";
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            if (isCornerManual || !cornerSection) return;
+            const rect = cornerSection.getBoundingClientRect();
+            const scrollable = cornerSection.offsetHeight - window.innerHeight;
+            if (scrollable <= 0) return;
+
+            const progress = -rect.top / scrollable;
+            if (progress >= -0.05 && progress <= 1.05) {
+                const deg = Math.max(0, Math.min(380, progress * 380));
+                updateCornerSample380(deg);
+            }
+        }, { passive: true });
+
+        if (cornerScrubber) {
+            cornerScrubber.addEventListener('input', (e) => {
+                stopCornerAutoRotate();
+                isCornerManual = true;
+                updateCornerSample380(parseFloat(e.target.value));
+                setTimeout(() => { isCornerManual = false; }, 1800);
+            });
+        }
+
+        function toggleCornerExplode() {
+            isCornerExploded = !isCornerExploded;
+            const btn = document.getElementById('explode-corner-btn');
+            btn.innerHTML = isCornerExploded
+                ? `<i class="fa-solid fa-compress text-ataorange"></i> Close Layers`
+                : `<i class="fa-solid fa-arrows-up-down-left-right text-ataorange"></i> Expand Layers`;
+        }
+
+        function toggleCornerAutoRotate() {
+            if (cornerAutoInterval) {
+                stopCornerAutoRotate();
+                return;
+            }
+            isCornerManual = true;
+            const btn = document.getElementById('corner-autorotate-btn');
+            btn.innerHTML = `<i class="fa-solid fa-pause"></i> Pause 380°`;
+            let deg = currentCornerDeg >= 375 ? 0 : currentCornerDeg;
+
+            cornerAutoInterval = setInterval(() => {
+                deg += 2;
+                updateCornerSample380(deg);
+                if (deg >= 380) {
+                    stopCornerAutoRotate();
+                }
+            }, 25);
+        }
+
+        function stopCornerAutoRotate() {
+            if (cornerAutoInterval) {
+                clearInterval(cornerAutoInterval);
+                cornerAutoInterval = null;
+            }
+            const btn = document.getElementById('corner-autorotate-btn');
+            if (btn) btn.innerHTML = `<i class="fa-solid fa-play"></i> Auto-Rotate 380°`;
+            setTimeout(() => { isCornerManual = false; }, 1200);
+        }
+
+        // 4. PORTFOLIO CATEGORY FILTER
+        function filterPortfolio(cat, ev) {
+            const cards = document.querySelectorAll('.portfolio-card');
+            const tabs = document.querySelectorAll('.portfolio-tab');
+
+            tabs.forEach(t => {
+                t.className = "portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-applegray text-appledark hover:bg-zinc-200 border border-zinc-200 transition";
+            });
+            if (ev && ev.currentTarget) {
+                ev.currentTarget.className = "portfolio-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-ataorange text-white shadow-sm transition";
+            }
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-category') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function selectProduct(systemName) {
+            const select = document.getElementById('q-system');
+            if (select) select.value = systemName;
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('q-name').value;
+            const phone = document.getElementById('q-phone').value;
+            const email = document.getElementById('q-email').value;
+            const system = document.getElementById('q-system').value;
+            const details = document.getElementById('q-details').value;
+
+            const subject = encodeURIComponent(`Ata Rabah USA Quote Request - ${name}`);
+            const body = encodeURIComponent(
+                `Contractor / Client: ${name}\nPhone: ${phone}\nEmail: ${email}\nSelected System: ${system}\n\nProject Details:\n${details}`
+            );
+
+            const mailtoUrl = `mailto:abed@atarabah.com?subject=${subject}&body=${body}`;
+            document.getElementById('mailtoFallbackLink').href = mailtoUrl;
+            document.getElementById('quoteSuccessText').textContent = `Thank you, ${name}. Your inquiry for "${system}" is ready to send to Abed Abufara (abed@atarabah.com).`;
+            document.getElementById('quoteSuccessBox').classList.remove('hidden');
+            window.location.href = mailtoUrl;
+        }
+
+        // 5. OFFICIAL VIDEO SHOWREEL CANVAS ENGINE (Translated English Chapters)
+        const cinemaCanvas = document.getElementById('factory-cinema-canvas');
+        const cCtx = cinemaCanvas.getContext('2d');
+        let cinemaPlaying = true;
+        let cinemaScene = 0;
+        let cinemaTick = 0;
+
+        const scenesData = [
+            {
+                pill: "SCENE 01 / 04 • SLIDING DOORS: THE ULTIMATE SOLUTION",
+                title: "Enjoy a Panoramic View with Ultra-Slim Aluminum Doors",
+                desc: "Engineered by Ata Rabah for seamless indoor-outdoor living, high wind loads, and 45dB acoustic isolation."
+            },
+            {
+                pill: "SCENE 02 / 04 • WOOD-CLAD THERMAL-BREAK ALUMINUM",
+                title: "Warm Oak Wood Finish + Triple-Glazed Thermal Core",
+                desc: "Three panes of Low-E glass and polyamide thermal-break chambers built for -10°C Chicagoland winters."
+            },
+            {
+                pill: "SCENE 03 / 04 • PROTECTION • PRIVACY • LIGHT CONTROL",
+                title: "Motorized Architectural Security Shutters",
+                desc: "Whisper-quiet smart shutters integrated seamlessly into modern luxury villas and commercial facades."
+            },
+            {
+                pill: "SCENE 04 / 04 • ATA RABAH® USA • ORLAND PARK, ILLINOIS",
+                title: "Direct Factory Supply to Chicagoland Contractors",
+                desc: "Contact Abed Abufara (407-910-3711 | abed@atarabah.com) for custom project bids and architectural samples."
+            }
+        ];
+
+        function resizeCinemaCanvas() {
+            if (!cinemaCanvas) return;
+            cinemaCanvas.width = cinemaCanvas.clientWidth * window.devicePixelRatio;
+            cinemaCanvas.height = cinemaCanvas.clientHeight * window.devicePixelRatio;
+        }
+        window.addEventListener('resize', resizeCinemaCanvas);
+        resizeCinemaCanvas();
+
+        function setCinemaScene(idx) {
+            cinemaScene = idx;
+            cinemaTick = idx * 360;
+            updateCinemaTitles(idx);
+        }
+
+        function updateCinemaTitles(idx) {
+            document.getElementById('video-chapter-pill').textContent = scenesData[idx].pill;
+            document.getElementById('video-scene-title').textContent = scenesData[idx].title;
+            document.getElementById('video-scene-desc').textContent = scenesData[idx].desc;
+            const btns = document.querySelectorAll('.scene-btn');
+            btns.forEach((b, i) => {
+                b.className = i === idx
+                    ? "scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-bold bg-ataorange text-white transition"
+                    : "scene-btn px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-applegray text-appledark hover:bg-zinc-200 transition";
+            });
+        }
+
+        function toggleCinemaPlay() {
+            const vid = document.getElementById('ata-official-video');
+            if (!vid.classList.contains('hidden')) {
+                if (vid.paused) vid.play(); else vid.pause();
+                return;
+            }
+            cinemaPlaying = !cinemaPlaying;
+            document.getElementById('cinema-play-icon').className = cinemaPlaying ? "fa-solid fa-pause" : "fa-solid fa-play";
+        }
+
+        function toggleVideoAudio() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(
+                    "Ata Rabah U S A. Sliding Doors: The Ultimate Solution. Enjoy a panoramic view with our Wood-Clad Thermal-Break Aluminum systems, triple-glazed windows, and motorized shutters for protection, privacy, and light control."
+                );
+                msg.rate = 0.95;
+                window.speechSynthesis.speak(msg);
+            }
+        }
+
+        function renderCinemaFrame() {
+            if (cinemaPlaying) {
+                cinemaTick++;
+                const newScene = Math.floor((cinemaTick / 360) % 4);
+                if (newScene !== cinemaScene) {
+                    cinemaScene = newScene;
+                    updateCinemaTitles(cinemaScene);
+                }
+            }
+
+            const w = cinemaCanvas.width;
+            const h = cinemaCanvas.height;
+            if (w > 0 && h > 0) {
+                cCtx.clearRect(0, 0, w, h);
+                const grad = cCtx.createLinearGradient(0, 0, w, h);
+                grad.addColorStop(0, '#18181b');
+                grad.addColorStop(0.5, '#27272a');
+                grad.addColorStop(1, '#1c1917');
+                cCtx.fillStyle = grad;
+                cCtx.fillRect(0, 0, w, h);
+
+                cCtx.strokeStyle = 'rgba(232, 108, 31, 0.18)';
+                cCtx.lineWidth = 1.5;
+                const step = Math.max(45, w / 20);
+                const offset = (cinemaTick * 0.7) % step;
+                for (let x = -step; x < w + step; x += step) {
+                    cCtx.beginPath();
+                    cCtx.moveTo(x + offset, 0);
+                    cCtx.lineTo(x - h * 0.2 + offset, h);
+                    cCtx.stroke();
+                }
+
+                const boxW = w * 0.56;
+                const boxH = h * 0.56;
+                const startX = (w - boxW) / 2;
+                const startY = (h - boxH) / 2;
+                cCtx.strokeStyle = 'rgba(232, 108, 31, 0.7)';
+                cCtx.lineWidth = 3;
+                cCtx.strokeRect(startX, startY, boxW, boxH);
+
+                const slidePos = ((Math.sin(cinemaTick * 0.02) + 1) / 2) * (boxW * 0.45);
+                cCtx.fillStyle = 'rgba(232, 108, 31, 0.12)';
+                cCtx.fillRect(startX + slidePos, startY + 10, boxW * 0.48, boxH - 20);
+            }
+            requestAnimationFrame(renderCinemaFrame);
+        }
+
+        window.addEventListener('resize', () => {
+            if (renderer && camera && cornerCanvas) {
+                camera.aspect = cornerCanvas.clientWidth / cornerCanvas.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(cornerCanvas.clientWidth, cornerCanvas.clientHeight);
+            }
+        });
+
+        window.onload = function () {
+            renderCinemaFrame();
+            initCorner3D();
+        };
+    </script>
 </body>
 </html>
